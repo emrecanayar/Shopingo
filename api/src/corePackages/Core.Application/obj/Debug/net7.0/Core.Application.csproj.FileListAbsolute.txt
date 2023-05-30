@@ -40,3 +40,24 @@ C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePacka
 C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Application\obj\Debug\net7.0\refint\Core.Application.dll
 C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.pdb
 C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Application\obj\Debug\net7.0\ref\Core.Application.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Application.deps.json
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Application.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Application.pdb
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.CrossCuttingConcerns.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Domain.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Helpers.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Persistence.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.CrossCuttingConcerns.pdb
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Domain.pdb
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Persistence.pdb
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\bin\Debug\net7.0\Core.Helpers.pdb
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.csproj.AssemblyReference.cache
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.AssemblyInfoInputs.cache
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.AssemblyInfo.cs
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.csproj.CoreCompileInputs.cache
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.csproj.CopyComplete
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\refint\Core.Application.dll
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\Core.Application.pdb
+C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\corePackages\Core.Application\obj\Debug\net7.0\ref\Core.Application.dll
