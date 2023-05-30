@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = webAPI.Persistence
-build_property.ProjectDir = C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\projects\webAPI\webAPI.Persistence\
+build_property.ProjectDir = C:\Users\Emre Can Ayar\Desktop\Shopingo\api\src\projects\webAPI\webAPI.Persistence\

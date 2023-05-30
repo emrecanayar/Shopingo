@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5x2TzbLfb9G4pCstPuB5H//FW4AfBrpzNUBe+B772uugpbHH6MZRLo88ywUSrUp/RfpdZ0F+yJJDmSRPV56hzQ==",
+  "dgSpecHash": "dj9z6Cw8OkTqZl2Q11B5Zf9QAetOvYFJigl89lRDmlN3zifJAcyKCEwGHBhar5vcnmF3pN44hne53UabgdZzhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj",
+  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.ElasticSearch\\Core.ElasticSearch.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\elasticsearch.net\\7.17.5\\elasticsearch.net.7.17.5.nupkg.sha512",
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "StiHzj2JIC4AF8IpPdh2vOkkUbE/BJEnLxvj+SfxnIcbo0oc911ia1R0X7deo7LmZkdrFEeFuUMNynKIu/1ECA==",
+  "dgSpecHash": "VtCO5UogVu1Hu/qPw4oBFd5CKqQqce3xlujjDrfK6ygsXlL6T3533iYDeoR2cB14tube3wt9JH4+oAOwHNVShg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Domain\\Core.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Domain\\Core.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

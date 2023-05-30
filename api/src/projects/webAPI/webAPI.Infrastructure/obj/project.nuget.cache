@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eMjHEfNMuf9teDPxaeLs0D/+PplgB0Ry0+1LYn0lY0G1vVCpzoLHSEuBdrgXGmuQUkbKT0kLlhRLcDK2hkCuCw==",
+  "dgSpecHash": "X0DxHrEgjekGmrpXqpgkWGzjvgM4JZiVT5QHEMe+JlXxgF//xcZJYUpHliWMZsycWzzsTy6ua8oNhoLqqf32TA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Infrastructure\\webAPI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Infrastructure\\webAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

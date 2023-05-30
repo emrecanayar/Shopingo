@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T+ZRFD/0897TPlABFzvUvP8XKRoBD7QYTbK8YXgya3AC+o7/bYwgs5NZC/uUj7w1ET/z+7GLblVu3YFzKsrukA==",
+  "dgSpecHash": "I7Elc9CidQ4kVx8Ey0/hYxB5lwOR65fSdUZMgW64Em5ss/3bDraiI+tJCWn6XqXE0DCqXFU1BudW0CNAzl93Jw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj",
+  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\mailkit\\4.0.0\\mailkit.4.0.0.nupkg.sha512",

@@ -9769,11 +9769,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Application\\Core.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Application\\Core.Application.csproj",
       "projectName": "Core.Application",
-      "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Application\\Core.Application.csproj",
+      "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Application\\Core.Application.csproj",
       "packagesPath": "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Application\\obj\\",
+      "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emre Can Ayar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9790,14 +9790,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
             },
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Domain\\Core.Domain.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Domain\\Core.Domain.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Domain\\Core.Domain.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Domain\\Core.Domain.csproj"
             },
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj"
             }
           }
         }

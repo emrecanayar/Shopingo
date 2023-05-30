@@ -974,11 +974,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.BackgroundJob\\Core.BackgroundJob.csproj",
+      "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.BackgroundJob\\Core.BackgroundJob.csproj",
       "projectName": "Core.BackgroundJob",
-      "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.BackgroundJob\\Core.BackgroundJob.csproj",
+      "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.BackgroundJob\\Core.BackgroundJob.csproj",
       "packagesPath": "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.BackgroundJob\\obj\\",
+      "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.BackgroundJob\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emre Can Ayar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -995,8 +995,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Mailing\\Core.Mailing.csproj"
             }
           }
         }

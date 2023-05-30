@@ -11025,11 +11025,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI\\webAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI\\webAPI.csproj",
       "projectName": "webAPI",
-      "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI\\webAPI.csproj",
+      "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI\\webAPI.csproj",
       "packagesPath": "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI\\obj\\",
+      "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Emre Can Ayar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11047,20 +11047,20 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.CrossCuttingConcerns\\Core.CrossCuttingConcerns.csproj"
             },
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Utilities\\Core.Utilities.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Utilities\\Core.Utilities.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Utilities\\Core.Utilities.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Utilities\\Core.Utilities.csproj"
             },
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Application\\webAPI.Application.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Application\\webAPI.Application.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Application\\webAPI.Application.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Application\\webAPI.Application.csproj"
             },
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Infrastructure\\webAPI.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Infrastructure\\webAPI.Infrastructure.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Infrastructure\\webAPI.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Infrastructure\\webAPI.Infrastructure.csproj"
             },
-            "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Persistence\\webAPI.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Persistence\\webAPI.Persistence.csproj"
+            "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Persistence\\webAPI.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Persistence\\webAPI.Persistence.csproj"
             }
           }
         }

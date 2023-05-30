@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vCK9fTm9Qu1qfacd50XJOS/Kmw64Or4yLkgwog2g1nr9j9lwnm73hHtqMtGYnPBEXsbu/9/THAZZq0+0FqJLYg==",
+  "dgSpecHash": "UG+IZ9Ny156/wiGlAOAY185YizJeiAjb3wPUyCm75iLfqjV/AImGLD9jf/WyK4giq1WrC8qCB0er5sTWgJTdjA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Security\\Core.Security.csproj",
+  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Security\\Core.Security.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\closedxml\\0.101.0\\closedxml.0.101.0.nupkg.sha512",
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\documentformat.openxml\\2.16.0\\documentformat.openxml.2.16.0.nupkg.sha512",

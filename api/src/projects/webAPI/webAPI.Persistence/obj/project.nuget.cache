@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8JZV53HHaPA8nc5twMQ73gGahpHvbGSIhRfuEw7Aq5uSyUKqrspcm3EINoW8t3ZE8JsPHK1tdJNB1G73f2+K8g==",
+  "dgSpecHash": "HxTLKLl1ifmTj8kxlE515eabo8jqjXoeyXHP7eIo15dHlIgD2OxBboiYAL7MO3gXII4YMv7L//HUY4+GVPV99w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\projects\\webAPI\\webAPI.Persistence\\webAPI.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\projects\\webAPI\\webAPI.Persistence\\webAPI.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

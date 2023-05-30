@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H9B0WXRNIg/Ts0SDEpg5CjaEnkJFP7qQNg43RoVLoex/l7y63mKk3w6GJiXQYHy09ffkBcL/QlwGp/u/Emyzfg==",
+  "dgSpecHash": "RwzTSgOJ3ai8HcCwmQVifJjR3ZaCwIxh2L/14zm3xsFM7TCxnzjXGw6f8dtgj3K1D3TsL8hk6jvBHcBzL011lA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Emre Can Ayar\\Desktop\\Shopingo\\api\\src\\corePackages\\Core.Persistence\\Core.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
