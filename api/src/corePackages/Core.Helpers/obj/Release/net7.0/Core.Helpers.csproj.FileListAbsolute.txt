@@ -1,0 +1,12 @@
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\bin\Release\net7.0\Core.Helpers.deps.json
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\bin\Release\net7.0\Core.Helpers.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\bin\Release\net7.0\Core.Helpers.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\Core.Helpers.csproj.AssemblyReference.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\Core.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\Core.Helpers.AssemblyInfoInputs.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\Core.Helpers.AssemblyInfo.cs
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\Core.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\Core.Helpers.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\refint\Core.Helpers.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\Core.Helpers.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Helpers\obj\Release\net7.0\ref\Core.Helpers.dll

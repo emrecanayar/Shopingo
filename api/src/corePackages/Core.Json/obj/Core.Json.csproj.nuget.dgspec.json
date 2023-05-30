@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Json\\Core.Json.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\Core.Helpers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\Core.Helpers.csproj",
+        "projectName": "Core.Helpers",
+        "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\Core.Helpers.csproj",
+        "packagesPath": "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Emre Can Ayar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.101.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.30.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Json\\Core.Json.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Json\\Core.Json.csproj",
+        "projectName": "Core.Json",
+        "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Json\\Core.Json.csproj",
+        "packagesPath": "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Json\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Emre Can Ayar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\Core.Helpers.csproj": {
+                "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\Core.Helpers.csproj"
+              },
+              "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Timing\\Core.Timing.csproj": {
+                "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Timing\\Core.Timing.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Timing\\Core.Timing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Timing\\Core.Timing.csproj",
+        "projectName": "Core.Timing",
+        "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Timing\\Core.Timing.csproj",
+        "packagesPath": "C:\\Users\\Emre Can Ayar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Timing\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Emre Can Ayar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\Core.Helpers.csproj": {
+                "projectPath": "C:\\Users\\Emre Can Ayar\\Desktop\\Emre Can Ayar\\shopingo-api\\Shopingo\\src\\corePackages\\Core.Helpers\\Core.Helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\bin\Release\net7.0\Core.CrossCuttingConcerns.deps.json
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\bin\Release\net7.0\Core.CrossCuttingConcerns.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\bin\Release\net7.0\Core.CrossCuttingConcerns.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\bin\Release\net7.0\Core.Domain.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\bin\Release\net7.0\Core.Helpers.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\bin\Release\net7.0\Core.Domain.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\bin\Release\net7.0\Core.Helpers.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.csproj.AssemblyReference.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.AssemblyInfoInputs.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.AssemblyInfo.cs
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.csproj.CoreCompileInputs.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.csproj.CopyComplete
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\refint\Core.CrossCuttingConcerns.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\Core.CrossCuttingConcerns.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.CrossCuttingConcerns\obj\Release\net7.0\ref\Core.CrossCuttingConcerns.dll

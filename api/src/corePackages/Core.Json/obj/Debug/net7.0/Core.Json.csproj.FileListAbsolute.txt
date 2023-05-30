@@ -1,0 +1,34 @@
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Json.deps.json
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Json.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Json.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Helpers.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Timing.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Helpers.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Timing.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.csproj.AssemblyReference.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.AssemblyInfoInputs.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.AssemblyInfo.cs
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.csproj.CoreCompileInputs.cache
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.csproj.CopyComplete
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\refint\Core.Json.dll
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.pdb
+C:\Users\Emre Can Ayar\Desktop\runflow_api\src\corePackages\Core.Json\obj\Debug\net7.0\ref\Core.Json.dll
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Json.deps.json
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Json.dll
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Json.pdb
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Helpers.dll
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Timing.dll
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Helpers.pdb
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\bin\Debug\net7.0\Core.Timing.pdb
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.csproj.AssemblyReference.cache
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.AssemblyInfoInputs.cache
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.AssemblyInfo.cs
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.csproj.CoreCompileInputs.cache
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.csproj.CopyComplete
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.dll
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\refint\Core.Json.dll
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\Core.Json.pdb
+C:\Users\Emre Can Ayar\Desktop\Emre Can Ayar\shopingo-api\Shopingo\src\corePackages\Core.Json\obj\Debug\net7.0\ref\Core.Json.dll
