@@ -4,11 +4,15 @@ import { Component, OnInit } from '@angular/core';
 import { CategoryListModel } from 'src/app/models/category/category-list-model';
 import { ContactInfoListModel } from 'src/app/models/contact-info/contact-info-list-model';
 import { ContactInfoService } from 'src/app/services/contact-info/contact-info.service';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
+  standalone:true,
+  imports:[NgIf,NgFor],
+  providers:[CategoryService,ContactInfoService]
 })
 export class FooterComponent implements OnInit {
   categories: CustomResponseDto<CategoryListModel>;

@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-new-arrivals',
   templateUrl: './new-arrivals.component.html',
-  styleUrls: ['./new-arrivals.component.css']
+  styleUrls: ['./new-arrivals.component.css'],
+  standalone:true
 })
 export class NewArrivalsComponent {
 
