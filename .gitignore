@@ -364,13 +364,5 @@ MigrationBackup/
 FodyWeavers.xsd
 */obj
 */obj/*
-/src/corePackages/Core.Persistence/obj/Debug/net7.0/Core.Persistence.assets.cache
-/.vs/MeTechCommerce/DesignTimeBuild/.dtbcache.v2
-/.vs/MeTechCommerce/v17/.suo
-/src/corePackages/Core.Persistence/obj/Debug/net7.0/Core.Persistence.csproj.AssemblyReference.cache
-/src/corePackages/Core.Persistence/obj/Debug/net7.0/Core.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-/src/projects/aliAlpay/aliAlpayCorePackages/aliAlpay.Core.Domain/obj/Debug/net7.0/aliAlpay.Core.Domain.csproj.AssemblyReference.cache
-/src/projects/aliAlpay/aliAlpayCorePackages/aliAlpay.Core.Persistence/obj/Debug/net7.0/aliAlpay.Core.Persistence.assets.cache
-/src/projects/aliAlpay/aliAlpayCorePackages/aliAlpay.Core.Persistence/obj/Debug/net7.0/aliAlpay.Core.Persistence.csproj.AssemblyReference.cache
-/src/projects/aliAlpay/aliAlpayCorePackages/aliAlpay.Core.Persistence/obj/Debug/net7.0/aliAlpay.Core.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-/src/projects/aliAlpay/aliAlpayWeb/aliAlpayWeb.API/obj/Debug/net7.0/aliAlpayWeb.API.csproj.AssemblyReference.cache
+/api/.vs/ProjectEvaluation/shopingo.metadata.v7.bin
+/api/.vs/ProjectEvaluation/shopingo.projects.v7.bin
