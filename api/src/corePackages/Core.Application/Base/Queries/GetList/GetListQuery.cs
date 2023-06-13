@@ -37,15 +37,15 @@ namespace Core.Application.Base.Queries.GetList
             {
                 IQueryable<TEntity> query = _asyncRepository.Query();
 
-                if (request.IncludeProperty.IncludeProperties != null)
+                if (request.IncludeProperty?.IncludeProperties != null)
                 {
-                    IncludeSpecification<TEntity> includeSpecification = new IncludeSpecification<TEntity>();
+                    StringIncludeSpecification<TEntity> includeSpecification = new StringIncludeSpecification<TEntity>();
                     foreach (string includeProperty in request.IncludeProperty.IncludeProperties)
                     {
-                        includeSpecification.Include(_baseBusinessRules.GetIncludeLambda(typeof(TEntity), includeProperty));
+                        includeSpecification.Include(includeProperty);
                     }
 
-                    query = includeSpecification.BuildQuery(query);
+                    query = includeSpecification.ApplyIncludes(query);
                 }
 
                 IPaginate<TEntity> entities = await query.ToPaginateAsync(index: request.PageRequest.Page, size: request.PageRequest.PageSize);
