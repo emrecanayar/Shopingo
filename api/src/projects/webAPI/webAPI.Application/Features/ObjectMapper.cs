@@ -4,6 +4,11 @@ using AutoMapper;
 using webAPI.Application.Features.Auths.Profiles;
 using webAPI.Application.Features.Categories.Profiles;
 using webAPI.Application.Features.ContactInfos.Profiles;
+using webAPI.Application.Features.ProductColors.Profiles;
+using webAPI.Application.Features.ProductDeliveries.Profiles;
+using webAPI.Application.Features.Products.Profiles;
+using webAPI.Application.Features.ProductSizes.Profiles;
+using webAPI.Application.Features.ProductUploadedFiles.Profiles;
 using webAPI.Application.Features.Sizes.Profiles;
 using webAPI.Application.Features.SubCategories.Profiles;
 
@@ -22,6 +27,11 @@ namespace webAPI.Application.Features
                 configuration.AddProfile<SubCategoryMappingProfiles>();
                 configuration.AddProfile<ContactInfoMappingProfiles>();
                 configuration.AddProfile<SizeMappingProfiles>();
+                configuration.AddProfile<ProductColorMappingProfiles>();
+                configuration.AddProfile<ProductDeliveryMappingProfiles>();
+                configuration.AddProfile<ProductSizeMappingProfiles>();
+                configuration.AddProfile<ProductUploadedFileMappingProfiles>();
+                configuration.AddProfile<ProductMappingProfiles>();
 
             });
 

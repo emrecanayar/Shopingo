@@ -17,6 +17,7 @@ namespace Core.Domain.Entities
         public ICollection<ProductColor> ProductColors { get; set; }
         public ICollection<ProductDelivery> ProductDeliveries { get; set; }
         public ICollection<ProductUploadedFile> ProductUploadedFiles { get; set; }
+        public ICollection<ProductCategory> ProductCategories { get; set; }
 
         public Product()
         {
@@ -24,6 +25,7 @@ namespace Core.Domain.Entities
             ProductColors = new HashSet<ProductColor>();
             ProductDeliveries = new HashSet<ProductDelivery>();
             ProductUploadedFiles = new HashSet<ProductUploadedFile>();
+            ProductCategories = new HashSet<ProductCategory>();
 
         }
 

@@ -12,6 +12,8 @@ using webAPI.Application.Features.Categories.Dtos;
 using webAPI.Application.Features.Categories.Models;
 using webAPI.Application.Features.ContactInfos.Dtos;
 using webAPI.Application.Features.ContactInfos.Models;
+using webAPI.Application.Features.Products.Dtos;
+using webAPI.Application.Features.Products.Models;
 using webAPI.Application.Features.Sizes.Dtos;
 using webAPI.Application.Features.Sizes.Models;
 using webAPI.Application.Features.SubCategories.Dtos;
@@ -57,6 +59,12 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<CreateCommand<Size, SizeCreateDto>, CustomResponseDto<SizeCreateDto>>, CreateCommand<Size, SizeCreateDto>.CreateCommandHandler>();
             services.AddScoped<IRequestHandler<UpdateCommand<Size, SizeUpdateDto>, CustomResponseDto<SizeUpdateDto>>, UpdateCommand<Size, SizeUpdateDto>.UpdateCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCommand<Size, SizeDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<Size, SizeDeleteDto>.DeleteCommandHandler>();
+            #endregion
+
+            #region Product
+            services.AddScoped<IRequestHandler<GetListQuery<Product, ProductListModel>, CustomResponseDto<ProductListModel>>, GetListQuery<Product, ProductListModel>.GetListQueryHandler>();
+            services.AddScoped<IRequestHandler<GetByIdQuery<Product, ProductDto>, CustomResponseDto<ProductDto>>, GetByIdQuery<Product, ProductDto>.GetByIdQueryHandler>();
+            services.AddScoped<IRequestHandler<GetListByDynamicQuery<Product, ProductListModel>, CustomResponseDto<ProductListModel>>, GetListByDynamicQuery<Product, ProductListModel>.GetListByDynamicQueryHandler>();
             #endregion
             return services;
 

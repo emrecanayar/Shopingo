@@ -53,5 +53,6 @@
         public const string PRODUCT_DELIVERY = "ProductDeliveries";
         public const string PRODUCT_COLOR = "ProductColors";
         public const string PRODUCT_SIZE = "ProductSizes";
+        public const string PRODUCT_CATEGORY = "ProductCategories";
     }
 }
