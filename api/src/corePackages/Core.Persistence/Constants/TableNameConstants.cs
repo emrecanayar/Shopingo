@@ -54,5 +54,6 @@
         public const string PRODUCT_COLOR = "ProductColors";
         public const string PRODUCT_SIZE = "ProductSizes";
         public const string PRODUCT_CATEGORY = "ProductCategories";
+        public const string CONTACT_US_FORM = "ContactUsForms";
     }
 }

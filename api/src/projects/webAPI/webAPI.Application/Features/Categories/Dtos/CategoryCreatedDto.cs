@@ -9,9 +9,9 @@ namespace webAPI.Application.Features.Categories.Dtos
         public string CategoryName { get; set; }
         public string Key { get; set; }
 
-        public CustomResponseDto<CategoryUpdatedDto> CreateResponseDto()
+        public CustomResponseDto<CategoryCreatedDto> CreateResponseDto()
         {
-            return new CustomResponseDto<CategoryUpdatedDto>()
+            return new CustomResponseDto<CategoryCreatedDto>()
             {
                 Data = new()
                 {

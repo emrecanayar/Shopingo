@@ -12,7 +12,7 @@ namespace webAPI.Application.Features.Categories.Profiles
         {
             CreateMap<Category, CategoryDeleteDto>().ReverseMap();
             CreateMap<Category, CategoryCreateDto>().ReverseMap();
-            CreateMap<Category, CategoryUpdateDto>().ReverseMap();
+            CreateMap<Category, ContactUsFormUpdateDto>().ReverseMap();
             CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<Category, CategoryListDto>().ReverseMap();
             CreateMap<IPaginate<Category>, CategoryListModel>().ReverseMap();

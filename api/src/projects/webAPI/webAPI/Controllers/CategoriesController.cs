@@ -50,10 +50,10 @@ namespace webAPI.Controllers
         }
 
         [HttpPut("UpdateCategory")]
-        public async Task<IActionResult> UpdateCategory([FromBody] CategoryUpdateDto model)
+        public async Task<IActionResult> UpdateCategory([FromBody] ContactUsFormUpdateDto model)
         {
-            UpdateCommand<Category, CategoryUpdateDto> command = new UpdateCommand<Category, CategoryUpdateDto>(model);
-            CustomResponseDto<CategoryUpdateDto> result = await Mediator.Send(command);
+            UpdateCommand<Category, ContactUsFormUpdateDto> command = new UpdateCommand<Category, ContactUsFormUpdateDto>(model);
+            CustomResponseDto<ContactUsFormUpdateDto> result = await Mediator.Send(command);
             return Ok(result);
         }
 

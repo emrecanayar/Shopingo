@@ -196,6 +196,76 @@ namespace Core.Persistence.Migrations
                     b.ToTable("ContactInfos", (string)null);
                 });
 
+            modelBuilder.Entity("Core.Domain.Entities.ContactUsForm", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("Id");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("CreatedBy");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsDeleted");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("ModifiedBy");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("ModifiedDate");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1)
+                        .HasColumnName("Status");
+
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ContactUsForms", (string)null);
+                });
+
             modelBuilder.Entity("Core.Domain.Entities.Delivery", b =>
                 {
                     b.Property<Guid>("Id")
@@ -630,7 +700,7 @@ namespace Core.Persistence.Migrations
                         {
                             Id = new Guid("d2e414d0-8a10-4b54-8858-3a8200f0a6f9"),
                             CreatedBy = "Admin",
-                            CreatedDate = new DateTime(2023, 6, 13, 14, 50, 18, 646, DateTimeKind.Local).AddTicks(3399),
+                            CreatedDate = new DateTime(2023, 6, 13, 19, 5, 22, 867, DateTimeKind.Local).AddTicks(1999),
                             IsDeleted = false,
                             Name = "admin",
                             Status = 1
@@ -1604,8 +1674,8 @@ namespace Core.Persistence.Migrations
                             IsDeleted = false,
                             LastName = "Admin",
                             ModifiedBy = "",
-                            PasswordHash = new byte[] { 79, 105, 108, 168, 52, 92, 103, 253, 12, 88, 59, 231, 149, 216, 138, 248, 36, 2, 169, 73, 5, 93, 208, 222, 144, 78, 15, 55, 53, 16, 202, 92, 71, 8, 159, 227, 2, 208, 54, 248, 239, 36, 83, 119, 236, 180, 103, 247, 242, 232, 91, 64, 41, 170, 144, 218, 28, 221, 4, 163, 196, 240, 108, 134 },
-                            PasswordSalt = new byte[] { 104, 246, 228, 34, 145, 111, 233, 168, 211, 172, 59, 177, 26, 75, 234, 198, 252, 246, 125, 69, 213, 206, 132, 127, 69, 206, 93, 114, 177, 183, 220, 0, 235, 137, 135, 207, 168, 96, 158, 116, 111, 35, 97, 95, 97, 15, 53, 163, 239, 145, 111, 121, 173, 164, 25, 152, 127, 241, 67, 236, 150, 237, 145, 254, 197, 88, 66, 240, 67, 35, 207, 159, 226, 125, 194, 32, 4, 68, 193, 96, 124, 179, 31, 88, 251, 150, 57, 230, 44, 15, 70, 17, 76, 20, 72, 58, 223, 141, 46, 229, 157, 147, 47, 114, 164, 24, 93, 198, 40, 147, 153, 119, 161, 168, 162, 17, 226, 183, 141, 199, 119, 31, 197, 249, 22, 124, 76, 46 },
+                            PasswordHash = new byte[] { 163, 16, 254, 161, 254, 5, 104, 116, 32, 51, 134, 75, 23, 147, 34, 155, 219, 209, 150, 212, 166, 112, 37, 211, 129, 87, 89, 88, 141, 179, 46, 29, 97, 239, 7, 42, 215, 223, 242, 223, 93, 58, 157, 228, 69, 251, 129, 49, 29, 230, 19, 189, 39, 226, 140, 42, 202, 238, 49, 194, 9, 28, 105, 80 },
+                            PasswordSalt = new byte[] { 18, 93, 214, 59, 2, 18, 1, 45, 138, 50, 241, 19, 191, 2, 153, 172, 44, 151, 148, 104, 137, 90, 81, 212, 218, 238, 24, 10, 217, 168, 228, 78, 203, 198, 26, 244, 108, 48, 9, 91, 251, 111, 168, 188, 248, 209, 122, 125, 20, 106, 49, 139, 248, 10, 83, 88, 125, 160, 8, 37, 78, 81, 253, 89, 47, 220, 250, 16, 193, 195, 54, 190, 0, 155, 90, 11, 246, 180, 50, 156, 82, 225, 42, 193, 113, 112, 192, 29, 154, 185, 48, 30, 160, 253, 147, 210, 147, 196, 28, 57, 173, 164, 154, 138, 48, 128, 60, 143, 251, 100, 114, 239, 248, 210, 64, 134, 157, 124, 96, 170, 215, 247, 198, 156, 175, 137, 181, 0 },
                             Status = 1,
                             UserType = 1
                         });
@@ -1671,7 +1741,7 @@ namespace Core.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fe065008-277f-479c-be14-f99646597405"),
+                            Id = new Guid("f76e29a9-f7c0-491e-9668-c5459c205806"),
                             CreatedBy = "System",
                             CreatedDate = new DateTime(2023, 3, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
@@ -1680,6 +1750,15 @@ namespace Core.Persistence.Migrations
                             Status = 1,
                             UserId = new Guid("8ad7fb9c-da00-4ca1-b8d5-ff636ff1ccb0")
                         });
+                });
+
+            modelBuilder.Entity("Core.Domain.Entities.ContactUsForm", b =>
+                {
+                    b.HasOne("Core.Domain.Entities.User", "User")
+                        .WithMany("ContactUsForms")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Core.Domain.Entities.Dictionary", b =>
@@ -1915,6 +1994,8 @@ namespace Core.Persistence.Migrations
 
             modelBuilder.Entity("Core.Domain.Entities.User", b =>
                 {
+                    b.Navigation("ContactUsForms");
+
                     b.Navigation("PasswordResetHistories");
 
                     b.Navigation("PasswordResetTokens");

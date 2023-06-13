@@ -19,12 +19,14 @@ namespace Core.Domain.Entities
         public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
         public virtual ICollection<PasswordResetHistory> PasswordResetHistories { get; set; }
         public virtual ICollection<PasswordResetToken> PasswordResetTokens { get; set; }
+        public virtual ICollection<ContactUsForm> ContactUsForms { get; set; }
         public User()
         {
             UserOperationClaims = new HashSet<UserOperationClaim>();
             RefreshTokens = new HashSet<RefreshToken>();
             PasswordResetHistories = new HashSet<PasswordResetHistory>();
             PasswordResetTokens = new HashSet<PasswordResetToken>();
+            ContactUsForms = new HashSet<ContactUsForm>();
         }
 
         public User(Guid id, string firstName, string lastName, string email, string userName, string registrationNumber, byte[] passwordSalt, byte[] passwordHash, AuthenticatorType authenticatorType, CultureType cultureType, UserType userType) : this()

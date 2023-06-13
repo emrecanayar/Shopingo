@@ -36,17 +36,16 @@ namespace Core.Application.Base.Queries.GetListByDynamic
             {
                 IQueryable<TEntity> query = _asyncRepository.Query();
 
-                if (request.DynamicIncludeProperty.IncludeProperties != null)
+                if (request.DynamicIncludeProperty?.IncludeProperties != null)
                 {
-                    IncludeSpecification<TEntity> includeSpecification = new IncludeSpecification<TEntity>();
+                    StringIncludeSpecification<TEntity> includeSpecification = new StringIncludeSpecification<TEntity>();
                     foreach (string includeProperty in request.DynamicIncludeProperty.IncludeProperties)
                     {
-                        includeSpecification.Include(_baseBusinessRules.GetIncludeLambda(typeof(TEntity), includeProperty));
+                        includeSpecification.Include(includeProperty);
                     }
 
-                    query = includeSpecification.BuildQuery(query);
+                    query = includeSpecification.ApplyIncludes(query);
                 }
-
                 query = query.ToDynamic(request.DynamicIncludeProperty.Dynamic);
 
                 IPaginate<TEntity> entities = await query.ToPaginateAsync(

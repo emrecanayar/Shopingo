@@ -12,6 +12,8 @@ using webAPI.Application.Features.Categories.Dtos;
 using webAPI.Application.Features.Categories.Models;
 using webAPI.Application.Features.ContactInfos.Dtos;
 using webAPI.Application.Features.ContactInfos.Models;
+using webAPI.Application.Features.ContactUsForms.Dtos;
+using webAPI.Application.Features.ContactUsForms.Models;
 using webAPI.Application.Features.Products.Dtos;
 using webAPI.Application.Features.Products.Models;
 using webAPI.Application.Features.Sizes.Dtos;
@@ -30,7 +32,7 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<GetByIdQuery<Category, CategoryDto>, CustomResponseDto<CategoryDto>>, GetByIdQuery<Category, CategoryDto>.GetByIdQueryHandler>();
             services.AddScoped<IRequestHandler<GetListByDynamicQuery<Category, CategoryListModel>, CustomResponseDto<CategoryListModel>>, GetListByDynamicQuery<Category, CategoryListModel>.GetListByDynamicQueryHandler>();
             services.AddScoped<IRequestHandler<CreateCommand<Category, CategoryCreateDto>, CustomResponseDto<CategoryCreateDto>>, CreateCommand<Category, CategoryCreateDto>.CreateCommandHandler>();
-            services.AddScoped<IRequestHandler<UpdateCommand<Category, CategoryUpdateDto>, CustomResponseDto<CategoryUpdateDto>>, UpdateCommand<Category, CategoryUpdateDto>.UpdateCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdateCommand<Category, ContactUsFormUpdateDto>, CustomResponseDto<ContactUsFormUpdateDto>>, UpdateCommand<Category, ContactUsFormUpdateDto>.UpdateCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCommand<Category, CategoryDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<Category, CategoryDeleteDto>.DeleteCommandHandler>();
             #endregion
 
@@ -65,6 +67,15 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<GetListQuery<Product, ProductListModel>, CustomResponseDto<ProductListModel>>, GetListQuery<Product, ProductListModel>.GetListQueryHandler>();
             services.AddScoped<IRequestHandler<GetByIdQuery<Product, ProductDto>, CustomResponseDto<ProductDto>>, GetByIdQuery<Product, ProductDto>.GetByIdQueryHandler>();
             services.AddScoped<IRequestHandler<GetListByDynamicQuery<Product, ProductListModel>, CustomResponseDto<ProductListModel>>, GetListByDynamicQuery<Product, ProductListModel>.GetListByDynamicQueryHandler>();
+            #endregion
+
+            #region ContactUsForm
+            services.AddScoped<IRequestHandler<GetListQuery<ContactUsForm, ContactUsFormListModel>, CustomResponseDto<ContactUsFormListModel>>, GetListQuery<ContactUsForm, ContactUsFormListModel>.GetListQueryHandler>();
+            services.AddScoped<IRequestHandler<GetByIdQuery<ContactUsForm, ContactUsFormDto>, CustomResponseDto<ContactUsFormDto>>, GetByIdQuery<ContactUsForm, ContactUsFormDto>.GetByIdQueryHandler>();
+            services.AddScoped<IRequestHandler<GetListByDynamicQuery<ContactUsForm, ContactUsFormListModel>, CustomResponseDto<ContactUsFormListModel>>, GetListByDynamicQuery<ContactUsForm, ContactUsFormListModel>.GetListByDynamicQueryHandler>();
+            services.AddScoped<IRequestHandler<CreateCommand<ContactUsForm, ContactUsFormCreateDto>, CustomResponseDto<ContactUsFormCreateDto>>, CreateCommand<ContactUsForm, ContactUsFormCreateDto>.CreateCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdateCommand<ContactUsForm, ContactUsFormUpdateDto>, CustomResponseDto<ContactUsFormUpdateDto>>, UpdateCommand<ContactUsForm, ContactUsFormUpdateDto>.UpdateCommandHandler>();
+            services.AddScoped<IRequestHandler<DeleteCommand<ContactUsForm, ContactUsFormDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<ContactUsForm, ContactUsFormDeleteDto>.DeleteCommandHandler>();
             #endregion
             return services;
 
