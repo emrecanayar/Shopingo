@@ -77,6 +77,7 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<UpdateCommand<ContactUsForm, ContactUsFormUpdateDto>, CustomResponseDto<ContactUsFormUpdateDto>>, UpdateCommand<ContactUsForm, ContactUsFormUpdateDto>.UpdateCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCommand<ContactUsForm, ContactUsFormDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<ContactUsForm, ContactUsFormDeleteDto>.DeleteCommandHandler>();
             #endregion
+
             return services;
 
         }
