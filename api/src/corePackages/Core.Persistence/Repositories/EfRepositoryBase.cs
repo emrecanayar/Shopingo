@@ -130,10 +130,16 @@ namespace Core.Persistence.Repositories
         }
         public async Task<List<TEntity>> UpdateRangeAsync(List<TEntity> entityList)
         {
-            Context.Entry(entityList).State = EntityState.Modified;
+            foreach (var entity in entityList)
+            {
+                Context.Entry(entity).State = EntityState.Modified;
+            }
+
             await Context.SaveChangesAsync();
+
             return entityList;
         }
+
 
         public async Task<TEntity> DeleteAsync(TEntity entity)
         {
@@ -142,11 +148,16 @@ namespace Core.Persistence.Repositories
             return entity;
         }
 
-        public async Task<List<TEntity>> DeleteRangeAsync(List<TEntity> entity)
+        public async Task<List<TEntity>> DeleteRangeAsync(List<TEntity> entityList)
         {
-            Context.Entry(entity).State = EntityState.Deleted;
+            foreach (var entity in entityList)
+            {
+                Context.Entry(entity).State = EntityState.Deleted;
+            }
+
             await Context.SaveChangesAsync();
-            return entity;
+
+            return entityList;
         }
 
         public TEntity? Get(Expression<Func<TEntity, bool>> predicate, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
@@ -209,6 +220,12 @@ namespace Core.Persistence.Repositories
             return entity;
         }
 
+        public async Task UpdateRangeAsync(IEnumerable<TEntity> entities)
+        {
+            Context.UpdateRange(entities);
+            await Context.SaveChangesAsync();
+        }
+
         public TEntity Delete(TEntity entity)
         {
             Context.Entry(entity).State = EntityState.Deleted;
@@ -250,13 +267,23 @@ namespace Core.Persistence.Repositories
             entity.IsDeleted = true;
             await UpdateAsync(entity);
         }
+
+        public async Task RemoveRangeAsync(IEnumerable<TEntity> entities)
+        {
+            foreach (var entity in entities)
+            {
+                entity.IsDeleted = true;
+            }
+
+            await UpdateRangeAsync(entities);
+        }
         public TEntity UpsertTranslations(TEntity entity, List<DictionaryDto> translations)
         {
             var addedList = new List<Dictionary>();
             var updatedList = new List<Dictionary>();
             if (translationKeyValue?.Count > 0)
             {
-                if (entity.Id.ToString() == String.Empty)
+                if (entity.Id == Guid.Empty)
                 {
                     foreach (var item in translationKeyValue)
                     {
@@ -280,7 +307,7 @@ namespace Core.Persistence.Repositories
                     List<Dictionary> translationList = _mapper.Map<List<Dictionary>>(translations);
                     foreach (var item in translationList)
                     {
-                        if (item.Id.ToString() != string.Empty)
+                        if (item.Id > Guid.Empty)
                         {
                             var dictionaryRecord = Context.Set<Dictionary>().FirstOrDefault(x => x.Id == item.Id);
                             dictionaryRecord.EntryValue = item.EntryValue;
@@ -403,6 +430,7 @@ namespace Core.Persistence.Repositories
                 Context.SaveChanges();
             }
         }
+
 
     }
 }

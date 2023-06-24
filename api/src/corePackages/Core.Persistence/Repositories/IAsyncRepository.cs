@@ -41,9 +41,11 @@ namespace Core.Persistence.Repositories
         Task<List<T>> AddRangeAsync(List<T> entity);
         Task<T> UpdateAsync(T entity);
         Task<List<T>> UpdateRangeAsync(List<T> entity);
+        Task UpdateRangeAsync(IEnumerable<T> entities);
         Task<T> DeleteAsync(T entity);
         Task<List<T>> DeleteRangeAsync(List<T> entity);
         Task RemoveAsync(int id);
         Task RemoveAsync(T entity);
+        Task RemoveRangeAsync(IEnumerable<T> entities);
     }
 }
