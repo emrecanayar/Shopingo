@@ -16,9 +16,20 @@ import { SliderSectionComponent } from 'src/app/components/slider-section/slider
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
-  standalone:true,
-  imports:[PrimaryMenuComponent,SliderSectionComponent,InformationComponent,PramotionComponent,FeaturedProductComponent,NewArrivalsComponent,AdvertiseBannersComponent,BrowseCategoryComponent,SupportInfoComponent,LatestNewComponent,BrandsComponent,BottomProductsSectionComponent]
+  standalone: true,
+  imports: [
+    PrimaryMenuComponent,
+    SliderSectionComponent,
+    InformationComponent,
+    PramotionComponent,
+    FeaturedProductComponent,
+    NewArrivalsComponent,
+    AdvertiseBannersComponent,
+    BrowseCategoryComponent,
+    SupportInfoComponent,
+    LatestNewComponent,
+    BrandsComponent,
+    BottomProductsSectionComponent,
+  ],
 })
-export class HomePageComponent {
-
-}
+export class HomePageComponent {}

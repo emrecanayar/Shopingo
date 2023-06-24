@@ -1,0 +1,160 @@
+$backgroundColors:#754fa0,#09b7bf,#90d36b,#f2d40d,#fcb12b,#ed1b72;
+/*$backgroundColors:lighten(#18bc9c,10),lighten(#18bc9c,5),#18bc9c,#18bc9c,lighten(#18bc9c,5),lighten(#18bc9c,10);*/
+$animationTime: 0.5s;
+$animationStyle:cubic-bezier(.23,.78,.69,.84);
+
+
+
+body {
+	background:rgb(40, 40, 50);
+	color:white;
+	text-align:center;
+	
+	p {
+		max-width:400px;
+		margin:10px auto;
+	}
+}
+.input-header {
+	background:rgb(50, 50, 60);
+	height:30px;
+	padding:12.5px;
+	box-sizing:content-box;
+}
+a, a:visited {
+	color:#18bc9c;
+}
+
+
+
+.bar-loader {
+    z-index: 10001;
+    width: 120px;
+    height: 100px;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: -60px;
+    -moz-transition: all $animationTime $animationStyle;
+    -o-transition: all $animationTime $animationStyle;
+    -webkit-transition: all $animationTime $animationStyle;
+    transition: all $animationTime $animationStyle;
+
+    b {
+        height: 100%;
+        width: 16px;
+        display: inline-block;
+        float: left;
+        margin-left: 2.4px;
+        margin-right: 2.4px;
+        -moz-transition: margin $animationTime $animationStyle;
+        -o-transition: margin $animationTime $animationStyle;
+        -webkit-transition: margin $animationTime $animationStyle;
+        transition: margin $animationTime $animationStyle;
+        -moz-animation: pulse 0.8s infinite ease-in-out;
+        -o-animation: pulse 0.8s infinite ease-in-out;
+        -webkit-animation: pulse 0.8s infinite ease-in-out;
+        animation: pulse 0.8s infinite ease-in-out;
+
+        $delay: -0.8;
+
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                background: nth($backgroundColors, $i);
+                -moz-animation-delay: $delay + 0.1s;
+                -o-animation-delay: $delay + 0.1s;
+                -webkit-animation-delay: $delay + 0.1s;
+                animation-delay: $delay + 0.1s;
+                $delay: $delay + 0.1s;
+            }
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.loader-overlay {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    -moz-transition: opacity $animationTime $animationStyle;
+    -o-transition: opacity $animationTime $animationStyle;
+    -webkit-transition: opacity $animationTime $animationStyle;
+    transition: opacity $animationTime $animationStyle;
+
+    &.ng-hide {
+        opacity: 0;
+
+        .bar-loader {
+            width:600px;
+            margin-left:-300px;
+
+            b {
+                margin-left:42px;
+                margin-right:42px;
+            }
+        }
+    }
+}
+
+@-moz-keyframes pulse {
+    0%, 40%, 100% {
+        -moz-transform: scaleY(0.05);
+        -ms-transform: scaleY(0.05);
+        -o-transform: scaleY(0.05);
+        -webkit-transform: scaleY(0.05);
+        transform: scaleY(0.05);
+    }
+    20% {
+        -moz-transform: scaleY(1.0);
+        -ms-transform: scaleY(1.0);
+        -o-transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+        transform: scaleY(1.0);
+    }
+}
+
+@-webkit-keyframes pulse {
+    0%, 40%, 100% {
+        -moz-transform: scaleY(0.05);
+        -ms-transform: scaleY(0.05);
+        -o-transform: scaleY(0.05);
+        -webkit-transform: scaleY(0.05);
+        transform: scaleY(0.05);
+    }
+    20% {
+        -moz-transform: scaleY(1.0);
+        -ms-transform: scaleY(1.0);
+        -o-transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+        transform: scaleY(1.0);
+    }
+}
+
+@keyframes pulse {
+    0%, 40%, 100% {
+        -moz-transform: scaleY(0.05);
+        -ms-transform: scaleY(0.05);
+        -o-transform: scaleY(0.05);
+        -webkit-transform: scaleY(0.05);
+        transform: scaleY(0.05);
+    }
+    20% {
+        -moz-transform: scaleY(1.0);
+        -ms-transform: scaleY(1.0);
+        -o-transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+        transform: scaleY(1.0);
+    }
+}
