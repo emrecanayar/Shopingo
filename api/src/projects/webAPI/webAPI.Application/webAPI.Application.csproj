@@ -24,8 +24,6 @@
   <ItemGroup>
     <Folder Include="Features\Auths\Models\" />
     <Folder Include="Features\Auths\Queries\" />
-    <Folder Include="Features\CompanyAddresses\Models\" />
-    <Folder Include="Features\CompanyAddresses\Profiles\" />
     <Folder Include="Features\SystemParameters\Commands\" />
     <Folder Include="Features\UploadedFiles\Models\" />
     <Folder Include="Features\UploadedFiles\Profiles\" />

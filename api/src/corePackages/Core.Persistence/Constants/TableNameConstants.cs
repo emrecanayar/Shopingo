@@ -56,5 +56,6 @@
         public const string PRODUCT_CATEGORY = "ProductCategories";
         public const string CONTACT_US_FORM = "ContactUsForms";
         public const string COMPANY_ADDRESS = "CompanyAddresses";
+        public const string CONTACT_US = "ContactUs";
     }
 }

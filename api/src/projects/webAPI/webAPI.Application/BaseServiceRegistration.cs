@@ -10,6 +10,8 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using webAPI.Application.Features.Categories.Dtos;
 using webAPI.Application.Features.Categories.Models;
+using webAPI.Application.Features.CompanyAddresses.Models;
+using webAPI.Application.Features.CompanyAddresss.Dtos;
 using webAPI.Application.Features.ContactInfos.Dtos;
 using webAPI.Application.Features.ContactInfos.Models;
 using webAPI.Application.Features.ContactUsForms.Dtos;
@@ -76,6 +78,16 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<CreateCommand<ContactUsForm, ContactUsFormCreateDto>, CustomResponseDto<ContactUsFormCreateDto>>, CreateCommand<ContactUsForm, ContactUsFormCreateDto>.CreateCommandHandler>();
             services.AddScoped<IRequestHandler<UpdateCommand<ContactUsForm, ContactUsFormUpdateDto>, CustomResponseDto<ContactUsFormUpdateDto>>, UpdateCommand<ContactUsForm, ContactUsFormUpdateDto>.UpdateCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCommand<ContactUsForm, ContactUsFormDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<ContactUsForm, ContactUsFormDeleteDto>.DeleteCommandHandler>();
+            #endregion
+
+            #region CompanyAddress
+            services.AddScoped<IRequestHandler<GetListQuery<CompanyAddress, CompanyAddressListModel>, CustomResponseDto<CompanyAddressListModel>>, GetListQuery<CompanyAddress, CompanyAddressListModel>.GetListQueryHandler>();
+            services.AddScoped<IRequestHandler<GetByIdQuery<CompanyAddress, CompanyAddressDto>, CustomResponseDto<CompanyAddressDto>>, GetByIdQuery<CompanyAddress, CompanyAddressDto>.GetByIdQueryHandler>();
+            services.AddScoped<IRequestHandler<GetListByDynamicQuery<CompanyAddress, CompanyAddressListModel>, CustomResponseDto<CompanyAddressListModel>>, GetListByDynamicQuery<CompanyAddress, CompanyAddressListModel>.GetListByDynamicQueryHandler>();
+            services.AddScoped<IRequestHandler<CreateCommand<CompanyAddress, CompanyAddressCreateDto>, CustomResponseDto<CompanyAddressCreateDto>>, CreateCommand<CompanyAddress, CompanyAddressCreateDto>.CreateCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdateCommand<CompanyAddress, CompanyAddressUpdateDto>, CustomResponseDto<CompanyAddressUpdateDto>>, UpdateCommand<CompanyAddress, CompanyAddressUpdateDto>.UpdateCommandHandler>();
+            services.AddScoped<IRequestHandler<DeleteCommand<CompanyAddress, CompanyAddressDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<CompanyAddress, CompanyAddressDeleteDto>.DeleteCommandHandler>();
+
             #endregion
 
             return services;

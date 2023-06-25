@@ -9,7 +9,7 @@
                     <div class="ms-auto">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mb-0 p-0">
-                                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i> Home</a>
+                                <li class="breadcrumb-item"><a routerLink=""><i class="bx bx-home-alt"></i> Home</a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="javascript:;">Pages</a>
                                 </li>
@@ -64,20 +64,19 @@
                         <div class="p-3 bg-light">
                             <div class="address mb-3">
                                 <h6 class="mb-0 text-uppercase">Address</h6>
-                                <p class="mb-0 font-12">123 Street Name, City, Australia</p>
+                                <p class="mb-0 font-12">{{companyAddresses.data.items[0].addressText}}</p>
                             </div>
                             <div class="phone mb-3">
                                 <h6 class="mb-0 text-uppercase">Phone</h6>
-                                <p class="mb-0 font-13">Toll Free (123) 472-796</p>
-                                <p class="mb-0 font-13">Mobile : +91-9910XXXX</p>
+                                <p class="mb-0 font-13">{{companyAddresses.data.items[0].phone}}</p>
                             </div>
                             <div class="email mb-3">
                                 <h6 class="mb-0 text-uppercase">Email</h6>
-                                <p class="mb-0 font-13">mail@example.com</p>
+                                <p class="mb-0 font-13">{{companyAddresses.data.items[0].email}}</p>
                             </div>
                             <div class="working-days mb-3">
                                 <h6 class="mb-0 text-uppercase">WORKING DAYS</h6>
-                                <p class="mb-0 font-13">Mon - FRI / 9:30 AM - 6:30 PM</p>
+                                <p class="mb-0 font-13">{{companyAddresses.data.items[0].workingDay}}</p>
                             </div>
                         </div>
                     </div>
