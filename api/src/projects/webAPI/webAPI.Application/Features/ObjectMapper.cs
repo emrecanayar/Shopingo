@@ -1,6 +1,7 @@
 ﻿using Application.Features.SystemParameters.Profiles;
 using Application.Features.Users.Profiles;
 using AutoMapper;
+using webAPI.Application.Features.AboutUsPage.Profiles;
 using webAPI.Application.Features.Auths.Profiles;
 using webAPI.Application.Features.Categories.Profiles;
 using webAPI.Application.Features.CompanyAddresses.Profiles;
@@ -36,6 +37,7 @@ namespace webAPI.Application.Features
                 configuration.AddProfile<ProductMappingProfiles>();
                 configuration.AddProfile<ContactUsFormMappingProfiles>();
                 configuration.AddProfile<CompanyAddressMappigProfiles>();
+                configuration.AddProfile<AboutUsMappingProfiles>();
 
             });
 

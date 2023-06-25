@@ -24,5 +24,6 @@
         public const int Country = 30;
         public const int Title = 100;
         public const int Code = 10;
+        public const string MAX = "nvarchar(MAX)";
     }
 }

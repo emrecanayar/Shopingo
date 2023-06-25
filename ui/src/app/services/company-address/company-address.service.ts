@@ -18,6 +18,7 @@ export class CompanyAddressService {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const url = this.apiUrl;
     const body = {};
+
     return await this.httpClient.post<
       CustomResponseDto<CompanyAddressListModel>
     >(url, body, {

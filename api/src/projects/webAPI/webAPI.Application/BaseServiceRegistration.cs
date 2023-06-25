@@ -8,6 +8,8 @@ using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using webAPI.Application.Features.AboutUsPage.Dtos;
+using webAPI.Application.Features.AboutUsPage.Models;
 using webAPI.Application.Features.Categories.Dtos;
 using webAPI.Application.Features.Categories.Models;
 using webAPI.Application.Features.CompanyAddresses.Models;
@@ -88,6 +90,12 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<UpdateCommand<CompanyAddress, CompanyAddressUpdateDto>, CustomResponseDto<CompanyAddressUpdateDto>>, UpdateCommand<CompanyAddress, CompanyAddressUpdateDto>.UpdateCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCommand<CompanyAddress, CompanyAddressDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<CompanyAddress, CompanyAddressDeleteDto>.DeleteCommandHandler>();
 
+            #endregion
+
+            #region AboutUs
+            services.AddScoped<IRequestHandler<GetListQuery<AboutUs, AboutUsListModel>, CustomResponseDto<AboutUsListModel>>, GetListQuery<AboutUs, AboutUsListModel>.GetListQueryHandler>();
+            services.AddScoped<IRequestHandler<GetByIdQuery<AboutUs, AboutUsDto>, CustomResponseDto<AboutUsDto>>, GetByIdQuery<AboutUs, AboutUsDto>.GetByIdQueryHandler>();
+            services.AddScoped<IRequestHandler<GetListByDynamicQuery<AboutUs, AboutUsListModel>, CustomResponseDto<AboutUsListModel>>, GetListByDynamicQuery<AboutUs, AboutUsListModel>.GetListByDynamicQueryHandler>();
             #endregion
 
             return services;

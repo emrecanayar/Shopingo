@@ -13,6 +13,7 @@ import { HomePageComponent } from './app/pages/home-page/home-page.component';
 import { ContactUsComponent } from './app/components/contact-us/contact-us.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutUsComponent } from './app/components/about-us/about-us.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -24,6 +25,7 @@ bootstrapApplication(AppComponent, {
       [
         { path: '', component: HomePageComponent },
         { path: 'contact-us', component: ContactUsComponent },
+        { path: 'about-us', component: AboutUsComponent },
       ],
       withPreloading(PreloadAllModules)
     ),
