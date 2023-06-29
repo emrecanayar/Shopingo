@@ -11,6 +11,7 @@ using Core.Application.Pipelines.Transaction;
 using Core.Application.Pipelines.Validation;
 using Core.Application.Rules;
 using Core.CrossCuttingConcerns.Logging.DbLog;
+using Core.CrossCuttingConcerns.Logging.DbLog.Mongo;
 using Core.CrossCuttingConcerns.Logging.SeriLog;
 using Core.CrossCuttingConcerns.Logging.SeriLog.Logger;
 using Core.ElasticSearch;
@@ -18,7 +19,10 @@ using Core.Helpers.Extensions;
 using Core.Mailing;
 using Core.Mailing.MailKitImplementations;
 using Core.Persistence.Repositories;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System.Reflection;
 using webAPI.Application.Services.AuthService;
 
@@ -26,7 +30,7 @@ namespace webAPI.Application
 {
     public static class ApplicationServiceRegistration
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
@@ -39,7 +43,15 @@ namespace webAPI.Application
             services.AddSingleton<LoggerServiceBase, FileLogger>();
             services.AddSingleton<IMailService, MailKitMailService>();
             services.AddSingleton<IDecryptService, DecryptService>();
-            services.AddScoped<Logging>();
+
+
+            services.Configure<LogDatabaseSettings>(configuration.GetSection(nameof(LogDatabaseSettings)));
+            services.AddSingleton<ILogDatabaseSettings>(sp => sp.GetRequiredService<IOptions<LogDatabaseSettings>>().Value);
+            services.AddLogging();
+            services.AddSingleton<Logging>();
+            services.AddSingleton<ILogService, MongoLogService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddScoped(typeof(BaseBusinessRules<>));
 
             services.AddSingleton<CustomStringLocalizer>();

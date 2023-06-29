@@ -28,27 +28,43 @@ namespace Core.CrossCuttingConcerns.Logging.DbLog.Dto
         public long? ResponseTime { get; set; }
 
         [JsonIgnore]
-        public string GetLog => $"Http Request Information:{Environment.NewLine}" +
-                                   $"Schema:{Scheme} " +
-                                   $"Host: {Host} " +
-                                   $"Path: {Path} " +
-                                   $"QueryString: {QueryString} " +
-                                   $"UserID:{UserId}" +
-                                   $"Remote Ip:{RemoteIp}" +
-                                   $"Headers:{Headers}" +
-                                   $"Request Body: {RequestBody}" +
-                                   $"Response Body: {ResponseBody}";
+        public string GetLog => $"Http Request Log Information:{Environment.NewLine}" +
+                                   $"{Environment.NewLine}EventId: {EventId} " +
+                                   $"{Environment.NewLine}LogDomain: {LogDomain} " +
+                                   $"{Environment.NewLine}UserId: {UserId} " +
+                                   $"{Environment.NewLine}LogDate: {LogDate} " +
+                                   $"{Environment.NewLine}Schema: {Scheme} " +
+                                   $"{Environment.NewLine}Host: {Host} " +
+                                   $"{Environment.NewLine}Path: {Path} " +
+                                   $"{Environment.NewLine}QueryString: {QueryString} " +
+                                   $"{Environment.NewLine}ResponseHeaders: {ResponseHeaders}" +
+                                   $"{Environment.NewLine}RequestMethod: {RequestMethod}" +
+                                   $"{Environment.NewLine}UserAgent: {UserAgent}" +
+                                   $"{Environment.NewLine}Remote Ip: {RemoteIp}" +
+                                   $"{Environment.NewLine}Headers: {Headers}" +
+                                   $"{Environment.NewLine}Request Body: {RequestBody}" +
+                                   $"{Environment.NewLine}Response Body: {ResponseBody}" +
+                                   $"{Environment.NewLine}StatusCode: {StatusCode}" +
+                                   $"{Environment.NewLine}ResponseTime: {ResponseTime}";
 
         [JsonIgnore]
-        public string GetErrorLog => $"Http Request Information:{Environment.NewLine}" +
-                                   $"Schema:{Scheme} " +
-                                   $"Host: {Host} " +
-                                   $"Path: {Path} " +
-                                   $"QueryString: {QueryString} " +
-                                   $"UserID:{UserId}" +
-                                   $"Remote Ip:{RemoteIp}" +
-                                   $"Headers:{Headers}" +
-                                   $"Request Body: {RequestBody}" +
-                                   $"Error : {Exception}";
+        public string GetErrorLog => $"Http Request ErrorLog Information:{Environment.NewLine}" +
+                                   $"{Environment.NewLine}Schema: {Scheme} " +
+                                   $"{Environment.NewLine}Host: {Host} " +
+                                   $"{Environment.NewLine}Path: {Path} " +
+                                   $"{Environment.NewLine}QueryString: {QueryString} " +
+                                   $"{Environment.NewLine}UserId: {UserId} " +
+                                   $"{Environment.NewLine}LogDate: {LogDate} " +
+                                   $"{Environment.NewLine}Remote Ip: {RemoteIp} " +
+                                   $"{Environment.NewLine}Headers: {Headers} " +
+                                   $"{Environment.NewLine}Request Body: {RequestBody} " +
+                                   $"{Environment.NewLine}UserAgent: {UserAgent}" +
+                                   $"{Environment.NewLine}Error : {Exception} " +
+                                   $"{Environment.NewLine}InnerError:{InnerException} " +
+                                   $"{Environment.NewLine}ErrorMessage : {ExceptionMessage} " +
+                                   $"{Environment.NewLine}InnerExceptionMessage : {InnerExceptionMessage} " +
+                                   $"{Environment.NewLine}StatusCode: {StatusCode}" +
+                                   $"{Environment.NewLine}ResponseTime: {ResponseTime}";
+
     }
 }

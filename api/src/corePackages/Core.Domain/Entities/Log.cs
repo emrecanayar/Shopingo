@@ -26,6 +26,8 @@ namespace Core.Domain.Entities
         public string InnerExceptionMessage { get; set; }
         public int? StatusCode { get; set; }
         public long? ResponseTime { get; set; }
+        public string GetLog { get; set; }
+        public string GetErrorLog { get; set; }
 
 
         public Log()
@@ -33,7 +35,7 @@ namespace Core.Domain.Entities
 
         }
 
-        public Log(Guid id, string eventId, string logDomain, string userId, DateTime logDate, string host, string path, string scheme, string queryString, string remoteIp, string headers, string responseHeaders, string requestMethod, string userAgent, string requestBody, string responseBody, string exception, string exceptionMessage, string innerException, string innerExceptionMessage, int? statusCode, long? responseTime) : this()
+        public Log(Guid id, string eventId, string logDomain, string userId, DateTime logDate, string host, string path, string scheme, string queryString, string remoteIp, string headers, string responseHeaders, string requestMethod, string userAgent, string requestBody, string responseBody, string exception, string exceptionMessage, string innerException, string innerExceptionMessage, int? statusCode, long? responseTime, string getLog, string getErrorLog) : this()
         {
             Id = id;
             EventId = eventId;
@@ -57,6 +59,8 @@ namespace Core.Domain.Entities
             InnerExceptionMessage = innerExceptionMessage;
             StatusCode = statusCode;
             ResponseTime = responseTime;
+            GetLog = getLog;
+            GetErrorLog = getErrorLog;
         }
     }
 }

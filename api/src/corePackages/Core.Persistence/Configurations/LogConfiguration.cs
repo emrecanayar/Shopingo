@@ -32,6 +32,8 @@ namespace Core.Persistence.Configurations
             builder.Property(x => x.InnerExceptionMessage).IsRequired(false).HasColumnName("InnerExceptionMessage").HasColumnType("text");
             builder.Property(x => x.StatusCode).IsRequired(false).HasColumnName("StatusCode");
             builder.Property(x => x.ResponseTime).IsRequired(false).HasColumnName("ResponseTime");
+            builder.Property(x => x.GetLog).IsRequired(false).HasColumnName("GetLog").HasColumnType(LengthContraints.MAX);
+            builder.Property(x => x.GetErrorLog).IsRequired(false).HasColumnName("GetErrorLog").HasColumnType(LengthContraints.MAX);
             builder.ToTable(TableNameConstants.LOG);
 
         }
