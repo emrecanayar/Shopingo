@@ -13,7 +13,7 @@ namespace webAPI.Application.Features.UploadedFiles.Commands.UploadFile
     public class UploadFileCommand : IRequest<CustomResponseDto<UploadedFileCreatedDto>>
     {
         public IFormFile File { get; set; }
-        public string WebRootPath { get; set; }
+        public string? WebRootPath { get; set; }
 
         public class UploadFileCommandHandler : IRequestHandler<UploadFileCommand, CustomResponseDto<UploadedFileCreatedDto>>
         {
