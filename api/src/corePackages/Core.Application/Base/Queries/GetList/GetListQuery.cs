@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Application.Base.Rules;
+using Core.Application.Pipelines.Authorization;
 using Core.Application.Requests;
 using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities.Base;
@@ -11,12 +12,20 @@ using System.Net;
 
 namespace Core.Application.Base.Queries.GetList
 {
-    public class GetListQuery<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>
+    public class GetListQuery<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>, ISecuredRequest
      where TEntity : Entity
      where TModel : BasePageableModel
     {
         public PageRequest PageRequest { get; set; }
         public IncludeProperty? IncludeProperty { get; set; }
+        public string[] Roles { get; set; }
+        public bool RequiresAuthorization { get; set; }
+
+        public GetListQuery(string[] roles = null, bool requiresAuthorization = false)
+        {
+            Roles = roles ?? Array.Empty<string>();
+            RequiresAuthorization = requiresAuthorization;
+        }
         public class GetListQueryHandler : IRequestHandler<GetListQuery<TEntity, TModel>, CustomResponseDto<TModel>>
         {
             private readonly IRepository<TEntity> _repository;

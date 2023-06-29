@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Application.Base.Rules;
+using Core.Application.Pipelines.Authorization;
 using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities.Base;
 using Core.Persistence.Dynamic;
@@ -10,12 +11,20 @@ using System.Net;
 
 namespace Core.Application.Base.Queries.GetById
 {
-    public class GetByIdQuery<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>
+    public class GetByIdQuery<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>, ISecuredRequest
     where TEntity : Entity
     where TModel : class
     {
         public Guid Id { get; set; }
         public IncludeProperty? IncludeProperty { get; set; }
+        public string[] Roles { get; set; }
+        public bool RequiresAuthorization { get; set; }
+
+        public GetByIdQuery(string[] roles = null, bool requiresAuthorization = false)
+        {
+            Roles = roles ?? Array.Empty<string>();
+            RequiresAuthorization = requiresAuthorization;
+        }
 
         public class GetByIdQueryHandler : IRequestHandler<GetByIdQuery<TEntity, TModel>, CustomResponseDto<TModel>>
         {

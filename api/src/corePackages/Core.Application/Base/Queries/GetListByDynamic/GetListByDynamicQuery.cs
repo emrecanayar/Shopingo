@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Application.Base.Rules;
+using Core.Application.Pipelines.Authorization;
 using Core.Application.Requests;
 using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities.Base;
@@ -11,12 +12,20 @@ using System.Net;
 
 namespace Core.Application.Base.Queries.GetListByDynamic
 {
-    public class GetListByDynamicQuery<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>
+    public class GetListByDynamicQuery<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>, ISecuredRequest
       where TEntity : Entity
       where TModel : BasePageableModel
     {
         public PageRequest PageRequest { get; set; }
         public DynamicIncludeProperty? DynamicIncludeProperty { get; set; }
+        public string[] Roles { get; set; }
+        public bool RequiresAuthorization { get; set; }
+
+        public GetListByDynamicQuery(string[] roles = null, bool requiresAuthorization = false)
+        {
+            Roles = roles ?? Array.Empty<string>();
+            RequiresAuthorization = requiresAuthorization;
+        }
 
         public class GetListByDynamicQueryHandler : IRequestHandler<GetListByDynamicQuery<TEntity, TModel>, CustomResponseDto<TModel>>
         {
