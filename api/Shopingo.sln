@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "corePackages", "corePackage
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projects", "projects", "{7F695F76-8EFA-4A51-ACD7-4AAEB738128B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Domain", "src\corePackages\Core.Domain\Core.Domain.csproj", "{CB920E48-6A1C-41D4-8FEF-59B0A0691256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Domain", "src\corePackages\Core.Domain\Core.Domain.csproj", "{CB920E48-6A1C-41D4-8FEF-59B0A0691256}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.BackgroundJob", "src\corePackages\Core.BackgroundJob\Core.BackgroundJob.csproj", "{2CDDA3EA-3ABB-4280-8ECE-E7925C7167B5}"
 EndProject
@@ -41,13 +41,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webAPI", "webAPI", "{118615
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adminAPI", "adminAPI", "{8DE01358-5671-46D9-A48D-E188052988FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webAPI.Application", "src\projects\webAPI\webAPI.Application\webAPI.Application.csproj", "{542E7610-3E3F-42AA-80A8-28E457652EB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webAPI.Application", "src\projects\webAPI\webAPI.Application\webAPI.Application.csproj", "{542E7610-3E3F-42AA-80A8-28E457652EB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webAPI.Persistence", "src\projects\webAPI\webAPI.Persistence\webAPI.Persistence.csproj", "{8CA127CA-0AD5-4437-81E6-E552C9877308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webAPI.Persistence", "src\projects\webAPI\webAPI.Persistence\webAPI.Persistence.csproj", "{8CA127CA-0AD5-4437-81E6-E552C9877308}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webAPI.Infrastructure", "src\projects\webAPI\webAPI.Infrastructure\webAPI.Infrastructure.csproj", "{B4BF6D63-96B8-4905-9BDA-784518301851}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webAPI.Infrastructure", "src\projects\webAPI\webAPI.Infrastructure\webAPI.Infrastructure.csproj", "{B4BF6D63-96B8-4905-9BDA-784518301851}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webAPI", "src\projects\webAPI\webAPI\webAPI.csproj", "{DF76B1E6-6977-4CA1-A7EF-FC19F1742CF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webAPI", "src\projects\webAPI\webAPI\webAPI.csproj", "{DF76B1E6-6977-4CA1-A7EF-FC19F1742CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adminAPI", "src\projects\adminAPI\adminAPI\adminAPI.csproj", "{121F7F9C-26F4-4A90-8C2D-9ABA249AF861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adminAPI.Application", "src\projects\adminAPI\adminAPI.Application\adminAPI.Application.csproj", "{F79CA1F6-5475-4861-930B-19D31F7023C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adminAPI.Persistence", "src\projects\adminAPI\adminAPI.Persistence\adminAPI.Persistence.csproj", "{164B0E4F-FC90-4B15-AC44-7186163A8721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "adminAPI.Infrastructure", "src\projects\adminAPI\adminAPI.Infrastructure\adminAPI.Infrastructure.csproj", "{AFDB4D76-9166-4577-A7CE-27612F329AF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +131,22 @@ Global
 		{DF76B1E6-6977-4CA1-A7EF-FC19F1742CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF76B1E6-6977-4CA1-A7EF-FC19F1742CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF76B1E6-6977-4CA1-A7EF-FC19F1742CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121F7F9C-26F4-4A90-8C2D-9ABA249AF861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121F7F9C-26F4-4A90-8C2D-9ABA249AF861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121F7F9C-26F4-4A90-8C2D-9ABA249AF861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121F7F9C-26F4-4A90-8C2D-9ABA249AF861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79CA1F6-5475-4861-930B-19D31F7023C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79CA1F6-5475-4861-930B-19D31F7023C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79CA1F6-5475-4861-930B-19D31F7023C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79CA1F6-5475-4861-930B-19D31F7023C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164B0E4F-FC90-4B15-AC44-7186163A8721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164B0E4F-FC90-4B15-AC44-7186163A8721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164B0E4F-FC90-4B15-AC44-7186163A8721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164B0E4F-FC90-4B15-AC44-7186163A8721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDB4D76-9166-4577-A7CE-27612F329AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDB4D76-9166-4577-A7CE-27612F329AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDB4D76-9166-4577-A7CE-27612F329AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDB4D76-9166-4577-A7CE-27612F329AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +173,10 @@ Global
 		{8CA127CA-0AD5-4437-81E6-E552C9877308} = {1186158C-E223-4F83-A37F-ABD4DDF480CC}
 		{B4BF6D63-96B8-4905-9BDA-784518301851} = {1186158C-E223-4F83-A37F-ABD4DDF480CC}
 		{DF76B1E6-6977-4CA1-A7EF-FC19F1742CF3} = {1186158C-E223-4F83-A37F-ABD4DDF480CC}
+		{121F7F9C-26F4-4A90-8C2D-9ABA249AF861} = {8DE01358-5671-46D9-A48D-E188052988FD}
+		{F79CA1F6-5475-4861-930B-19D31F7023C4} = {8DE01358-5671-46D9-A48D-E188052988FD}
+		{164B0E4F-FC90-4B15-AC44-7186163A8721} = {8DE01358-5671-46D9-A48D-E188052988FD}
+		{AFDB4D76-9166-4577-A7CE-27612F329AF7} = {8DE01358-5671-46D9-A48D-E188052988FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72D8C89C-ACAC-45C0-8405-8C2FF496627F}
