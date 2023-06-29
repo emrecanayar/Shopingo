@@ -4,11 +4,11 @@ using Core.Helpers.Helpers;
 using Core.Security.Dtos;
 using Core.Security.JWT;
 using MediatR;
+using System.Net;
 using webAPI.Application.Features.Auths.Dtos;
 using webAPI.Application.Features.Auths.Rules;
 using webAPI.Application.Services.AuthService;
 using webAPI.Application.Services.Repositories;
-using System.Net;
 using static Core.Domain.ComplexTypes.Enums;
 
 namespace webAPI.Application.Features.Auths.Commands.Register

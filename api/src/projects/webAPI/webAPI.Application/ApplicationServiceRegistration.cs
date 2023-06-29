@@ -25,6 +25,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System.Reflection;
 using webAPI.Application.Services.AuthService;
+using webAPI.Application.Services.UserService;
 
 namespace webAPI.Application
 {
@@ -51,6 +52,8 @@ namespace webAPI.Application
             services.AddSingleton<Logging>();
             services.AddSingleton<ILogService, MongoLogService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped<IUserAccessor, UserAccessor>();
 
             services.AddScoped(typeof(BaseBusinessRules<>));
 

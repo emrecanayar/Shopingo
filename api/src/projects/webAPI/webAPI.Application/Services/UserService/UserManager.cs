@@ -49,6 +49,7 @@ namespace webAPI.Application.Services.UserService
 
         public async Task<User> GetUserInformation(Guid id)
         {
+
             User? user = await _userRepository.GetAsync(u => u.Id == id);
             return user;
         }

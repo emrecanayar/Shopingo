@@ -222,7 +222,7 @@ namespace webAPI.Application.Services.AuthService
             _mailService.SendMail(new Mail
             {
                 ToList = toEmailList,
-                Subject = "Authenticator Code - runflow",
+                Subject = "Authenticator Code - Shopingo",
                 TextBody = $"Enter your authenticator code: {authenticatorCode}"
             });
         }
