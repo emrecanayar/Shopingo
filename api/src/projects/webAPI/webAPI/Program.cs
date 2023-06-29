@@ -1,11 +1,14 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Core.BackgroundJob.Extensions;
+using Core.BackgroundJob.Services;
 using Core.CrossCuttingConcerns.Exceptions;
 using Core.Security;
 using Core.Security.Encryption;
 using Core.Security.JWT;
 using Core.Utilities.ApiDoc;
 using Core.Utilities.Messages;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.IdentityModel.Tokens;
@@ -32,10 +35,15 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddSecurityServices();
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddBaseServices();
+builder.Services.AddHangfireServices();
 //builder.Services.AddInfrastructureServices();
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepositoryModule()));
+
+
+builder.Services.AddHangfire(config =>
+    config.UseSqlServerStorage(builder.Configuration.GetConnectionString("HangfireConnection")));
 
 builder.Services.AddCors(options =>
 {
@@ -104,8 +112,13 @@ builder.Services.AddSwaggerGen(opt =>
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     opt.IncludeXmlComments(xmlPath);
 });
+
+
 var app = builder.Build();
 app.UseStaticFiles();
+
+var retryPolicyService = app.Services.GetRequiredService<IRetryPolicyService>();
+retryPolicyService.ApplyPolicy();
 
 app.UseSwagger(x =>
 {
@@ -126,6 +139,18 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseConfigureCustomExceptionMiddleware();
+
+app.UseHangfireServer();
+app.UseHangfireDashboard("/job", new DashboardOptions
+{
+    DashboardTitle = "Shopingo Hangfire DashBoard",
+    AppPath = "/Home/HangfireAbout",
+
+});
+
+var hangfireJobsConfigurator = new HangfireJobsConfigurator(app.Services);
+hangfireJobsConfigurator.Configure();
+
 
 
 app.MapControllers();

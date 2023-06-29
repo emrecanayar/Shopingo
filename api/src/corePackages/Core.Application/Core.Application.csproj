@@ -19,6 +19,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Core.BackgroundJob\Core.BackgroundJob.csproj" />
 		<ProjectReference Include="..\Core.CrossCuttingConcerns\Core.CrossCuttingConcerns.csproj" />
 		<ProjectReference Include="..\Core.Domain\Core.Domain.csproj" />
 		<ProjectReference Include="..\Core.Persistence\Core.Persistence.csproj" />

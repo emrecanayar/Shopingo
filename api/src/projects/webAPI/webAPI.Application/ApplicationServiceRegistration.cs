@@ -23,6 +23,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System.Reflection;
+using webAPI.Application.Behaviors;
 using webAPI.Application.Services.AuthService;
 using webAPI.Application.Services.UserService;
 
@@ -75,6 +76,7 @@ namespace webAPI.Application
                 configuration.AddOpenBehavior(typeof(PerformanceBehavior<,>));
                 configuration.AddOpenBehavior(typeof(DbLoggingBehavior<,>));
                 configuration.AddOpenBehavior(typeof(CheckIdBehavior<,>));
+                configuration.AddOpenBehavior(typeof(PostProcessingBehavior<,>));
                 configuration.AddOpenBehavior(typeof(TransactionScopeBehavior<,>));
 
             });

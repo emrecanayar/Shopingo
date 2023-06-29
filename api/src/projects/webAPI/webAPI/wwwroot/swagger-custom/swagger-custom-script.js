@@ -6,8 +6,17 @@
             logo[0].target = "_blank";
             logo[0].children[0].alt = "Implemeting Swagger";
             logo[0].children[0].src = "../swagger-custom/logo-icon.png";
+
+            var spans = document.getElementsByTagName("span");
+
+            for (var i = 0; i < spans.length; i++) {
+                if (spans[i].textContent.includes("Select a definition")) {
+                    spans[i].classList.add("custom-span");
+                }
+            }
         });
     });
+
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
