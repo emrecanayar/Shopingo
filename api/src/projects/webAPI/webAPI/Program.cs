@@ -115,7 +115,7 @@ app.UseSwaggerUI(options =>
 {
     options.DocExpansion(DocExpansion.None);
     options.DefaultModelExpandDepth(-1);
-    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Runflow v1");
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Shopingo v1");
     options.InjectStylesheet("/swagger-custom/swagger-custom-styles.css");
     options.InjectJavascript("/swagger-custom/swagger-custom-script.js", "text/javascript");
 });
