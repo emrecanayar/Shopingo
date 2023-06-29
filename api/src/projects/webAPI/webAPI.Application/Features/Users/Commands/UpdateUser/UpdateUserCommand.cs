@@ -3,6 +3,7 @@ using Core.Application.Pipelines.Authorization;
 using Core.Domain.Entities;
 using Core.Helpers.Helpers;
 using MediatR;
+using System.Text.Json.Serialization;
 using webAPI.Application.Features.Users.Rules;
 using webAPI.Application.Services.Repositories;
 using static Core.Domain.Constants.OperationClaims;
@@ -19,6 +20,8 @@ public class UpdateUserCommand : IRequest<UpdatedUserDto>, ISecuredRequest
     public string RegistrationNumber { get; set; }
     public string Password { get; set; }
     public string[] Roles => new[] { Admin };
+    [JsonIgnore]
+    public bool RequiresAuthorization { get; set; } = true;
 
     public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, UpdatedUserDto>
     {

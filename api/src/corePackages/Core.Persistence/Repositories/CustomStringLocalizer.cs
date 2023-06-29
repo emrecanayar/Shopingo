@@ -142,7 +142,7 @@ namespace Core.Persistence.Repositories
             return langs;
         }
 
-        public string GetUserCulture(int userId)
+        public string GetUserCulture(Guid userId)
         {
             using LocalizationDbContext db = createDbContext();
             User user = db.Set<User>().Where(x => x.Status == RecordStatu.Active).AsNoTracking().FirstOrDefault();

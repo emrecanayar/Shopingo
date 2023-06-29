@@ -3,6 +3,7 @@ using Core.Application.Pipelines.Authorization;
 using Core.Domain.Entities;
 using Core.Helpers.Helpers;
 using MediatR;
+using System.Text.Json.Serialization;
 using webAPI.Application.Features.Users.Rules;
 using webAPI.Application.Services.AuthService;
 using webAPI.Application.Services.Repositories;
@@ -20,7 +21,8 @@ public class UpdateUserFromAuthCommand : IRequest<UpdatedUserFromAuthDto>, ISecu
     public string Password { get; set; }
     public string? NewPassword { get; set; }
     public string[] Roles => new[] { Admin };
-
+    [JsonIgnore]
+    public bool RequiresAuthorization { get; set; } = true;
     public class UpdateUserFromAuthCommandHandler : IRequestHandler<UpdateUserFromAuthCommand, UpdatedUserFromAuthDto>
     {
         private readonly IUserRepository _userRepository;

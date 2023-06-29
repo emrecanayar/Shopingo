@@ -17,13 +17,16 @@ namespace Core.Application.Pipelines.Authorization
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
-            List<string>? roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();
+            if (request is ISecuredRequest securedRequest && securedRequest.RequiresAuthorization)
+            {
+                List<string>? roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();
 
-            if (roleClaims == null) throw new AuthorizationException("Claims not found.");
+                if (roleClaims == null) throw new AuthorizationException("Claims not found.");
 
-            bool isNotMatchedARoleClaimWithRequestRoles = roleClaims.FirstOrDefault(roleClaim => request.Roles.Any(role => role == roleClaim)).IsNullOrEmpty();
+                bool isNotMatchedARoleClaimWithRequestRoles = roleClaims.FirstOrDefault(roleClaim => securedRequest.Roles.Any(role => role == roleClaim)).IsNullOrEmpty();
 
-            if (isNotMatchedARoleClaimWithRequestRoles) throw new AuthorizationException("You are not authorized.");
+                if (isNotMatchedARoleClaimWithRequestRoles) throw new AuthorizationException("You are not authorized.");
+            }
 
             TResponse response = await next();
             return response;

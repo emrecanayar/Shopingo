@@ -2,6 +2,7 @@ using Application.Features.Users.Dtos;
 using Core.Application.Pipelines.Authorization;
 using Core.Domain.Entities;
 using MediatR;
+using System.Text.Json.Serialization;
 using webAPI.Application.Features.Users.Rules;
 using webAPI.Application.Services.Repositories;
 using static Core.Domain.Constants.OperationClaims;
@@ -12,6 +13,8 @@ public class GetByIdUserQuery : IRequest<UserDto>, ISecuredRequest
 {
     public Guid Id { get; set; }
     public string[] Roles => new[] { Admin };
+    [JsonIgnore]
+    public bool RequiresAuthorization { get; set; } = true;
 
     public class GetByIdUserQueryHandler : IRequestHandler<GetByIdUserQuery, UserDto>
     {

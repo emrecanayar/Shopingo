@@ -44,7 +44,7 @@ namespace webAPI.Controllers
         [HttpPost("CreateCategory")]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryCreateDto model)
         {
-            CreateCommand<Category, CategoryCreateDto> command = new CreateCommand<Category, CategoryCreateDto>(model);
+            CreateCommand<Category, CategoryCreateDto> command = new CreateCommand<Category, CategoryCreateDto>(model, roles: new[] { "admin" }, requiresAuthorization: true);
             CustomResponseDto<CategoryCreateDto> result = await Mediator.Send(command);
             return Ok(result);
         }

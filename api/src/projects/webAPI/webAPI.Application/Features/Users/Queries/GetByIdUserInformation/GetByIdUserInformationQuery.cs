@@ -3,6 +3,7 @@ using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities;
 using MediatR;
 using System.Net;
+using System.Text.Json.Serialization;
 using webAPI.Application.Features.Users.Dtos;
 using webAPI.Application.Features.Users.Rules;
 using webAPI.Application.Services.UserService;
@@ -13,8 +14,9 @@ namespace webAPI.Application.Features.Users.Queries.GetByIdUserInformation
     public class GetByIdUserInformationQuery : IRequest<CustomResponseDto<UserInformationDto>>, ISecuredRequest
     {
         public Guid UserId { get; set; }
-
         public string[] Roles => new[] { Admin };
+        [JsonIgnore]
+        public bool RequiresAuthorization { get; set; } = true;
 
         public class GetByIdUserInformationQueryHandler : IRequestHandler<GetByIdUserInformationQuery, CustomResponseDto<UserInformationDto>>
         {

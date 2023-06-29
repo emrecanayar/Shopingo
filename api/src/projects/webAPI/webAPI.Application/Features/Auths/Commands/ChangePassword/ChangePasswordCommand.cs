@@ -17,8 +17,9 @@ namespace webAPI.Application.Features.Auths.Commands.ChangePassword
         public string Password { get; set; }
         public string NewPassword { get; set; }
         public string ConfirmPassword { get; set; }
-
         public string[] Roles => new[] { Admin };
+        [JsonIgnore]
+        public bool RequiresAuthorization { get; set; } = true;
 
         public class ChangePasswordCommandHandler : IRequestHandler<ChangePasswordCommand, CustomResponseDto<bool>>
         {

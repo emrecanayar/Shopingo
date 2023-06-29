@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Core.Application.Pipelines.Authorization;
 using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities.Base;
 using Core.Persistence.Repositories;
@@ -7,15 +8,21 @@ using System.Net;
 
 namespace Core.Application.Base.Commands.Create
 {
-    public class CreateCommand<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>
+    public class CreateCommand<TEntity, TModel> : IRequest<CustomResponseDto<TModel>>, ISecuredRequest
     where TEntity : Entity
     where TModel : class
     {
         public TModel Model { get; set; }
 
-        public CreateCommand(TModel model)
+        public string[] Roles { get; set; }
+
+        public bool RequiresAuthorization { get; set; }
+
+        public CreateCommand(TModel model, string[] roles = null, bool requiresAuthorization = false)
         {
             Model = model;
+            Roles = roles ?? Array.Empty<string>();
+            RequiresAuthorization = requiresAuthorization;
         }
 
         public class CreateCommandHandler : IRequestHandler<CreateCommand<TEntity, TModel>, CustomResponseDto<TModel>>

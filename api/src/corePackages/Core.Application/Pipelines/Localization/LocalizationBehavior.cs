@@ -26,7 +26,7 @@ namespace Core.Application.Pipelines.Localization
             var userClaim = _httpContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
 
             if (userClaim is not null)
-                firstLang = _localizer.GetUserCulture(int.Parse(userClaim.Value));
+                firstLang = _localizer.GetUserCulture(Guid.Parse(userClaim.Value));
 
             switch (firstLang)
             {
