@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ImageProcessor;
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using Microsoft.AspNetCore.Http;
 using System.Text;
 
 namespace Core.Helpers.Helpers
@@ -148,14 +150,20 @@ namespace Core.Helpers.Helpers
             return Directory.Exists(directoryPath);
         }
 
-        public static string GenerateURLForFile(IFormFile file, string webRootPath, string folderPath)
+        public static GenerateURL GenerateURLForFile(IFormFile file, string webRootPath, string folderPath)
         {
-            var name = file.FileName.Split('.');
-            var type = Path.GetExtension(file.FileName);
+            var name = file.FileName.Split('.')[0].Replace(" ", string.Empty);
+            var type = file.ContentType.ToLower().Contains("image") ? ".webp" : Path.GetExtension(file.FileName);
             CheckDirectoryExists(Path.Combine(webRootPath, folderPath.Replace("/", "\\")));
-            return $"{folderPath}\\{name[0]}{type}".Replace("\\", "/");
-        }
 
+            return new GenerateURL
+            {
+                FileType = type,
+                FileName = name,
+                Path = $"{folderPath.Replace(" ", string.Empty)}/{name}{type}".Replace("\\", "/"),
+                Extension = FileInfoHelper.GetFileExtension($"{folderPath.Replace(" ", string.Empty)}/{name}{type}".Replace("\\", "/")),
+            };
+        }
         public static string Upload(IFormFile file, string webRootPath, string filePath)
         {
             var isNotValid = CheckFileTypeValid(Path.GetExtension(file.FileName));
@@ -218,8 +226,21 @@ namespace Core.Helpers.Helpers
         {
             using (FileStream fs = File.Create(directory.Replace("/", "\\")))
             {
-                file.CopyTo(fs);
-                fs.Flush();
+                if (file.ContentType.ToLower().Contains("image"))
+
+                {
+                    using (ImageFactory imageFactory = new ImageFactory())
+                    {
+                        imageFactory.Load(file.OpenReadStream())
+                                    .Format(new WebPFormat())
+                                    .Save(fs);
+                    }
+                }
+                else
+                {
+                    file.CopyTo(fs);
+                    fs.Flush();
+                }
             }
         }
 
@@ -229,6 +250,16 @@ namespace Core.Helpers.Helpers
             {
                 File.Delete(directory.Replace("/", "\\"));
             }
+        }
+
+
+        public class GenerateURL
+        {
+            public string FileType { get; set; }
+            public string FileName { get; set; }
+            public string Path { get; set; }
+            public string Extension { get; set; }
+            public string Directory { get; set; }
         }
     }
 }

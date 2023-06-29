@@ -29,18 +29,18 @@ namespace webAPI.Application.Features.UploadedFiles.Commands.UploadFile
 
             public async Task<CustomResponseDto<UploadedFileCreatedDto>> Handle(UploadFileCommand request, CancellationToken cancellationToken)
             {
-                string filePath = FileHelper.GenerateURLForFile(request.File, request.WebRootPath, UPLOADEDFILE_FOLDER);
+                FileHelper.GenerateURL filePath = FileHelper.GenerateURLForFile(request.File, request.WebRootPath, UPLOADEDFILE_FOLDER);
                 UploadedFile uploadedFile = await this._uploadedFileService.AddOrUpdateDocument(new UploadedFileDto
                 {
-                    FileType = this._uploadedFileBusinessRules.DetectFileType(filePath),
-                    FileName = request.File.FileName,
-                    Path = filePath,
-                    Extension = FileInfoHelper.GetFileExtension(filePath),
+                    FileType = this._uploadedFileBusinessRules.DetectFileType(filePath.Path),
+                    FileName = request.File.FileName + filePath.FileType,
+                    Path = filePath.Path,
+                    Extension = FileInfoHelper.GetFileExtension(filePath.Path),
                     Directory = request.File.Name,
                 });
 
-                FileHelper.Upload(request.File, request.WebRootPath, filePath);
-                return CustomResponseDto<UploadedFileCreatedDto>.Success((int)HttpStatusCode.Created, new UploadedFileCreatedDto { Path = filePath, Token = uploadedFile.Token }, true);
+                FileHelper.Upload(request.File, request.WebRootPath, filePath.Path);
+                return CustomResponseDto<UploadedFileCreatedDto>.Success((int)HttpStatusCode.Created, new UploadedFileCreatedDto { Path = filePath.Path, Token = uploadedFile.Token }, true);
             }
         }
     }
