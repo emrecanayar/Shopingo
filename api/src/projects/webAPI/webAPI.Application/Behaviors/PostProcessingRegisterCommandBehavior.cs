@@ -5,11 +5,11 @@ using webAPI.Application.Jobs.FireAndForgetJobs;
 
 namespace webAPI.Application.Behaviors
 {
-    public class PostProcessingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public class PostProcessingRegisterCommandBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {
         private readonly IJobService _jobService;
 
-        public PostProcessingBehavior(IJobService jobService)
+        public PostProcessingRegisterCommandBehavior(IJobService jobService)
         {
             _jobService = jobService;
         }
@@ -20,13 +20,13 @@ namespace webAPI.Application.Behaviors
 
             if (request is RegisterCommand registerCommand)
             {
-                var email = registerCommand.UserForRegister.Email;
-                _jobService.Enqueue<RegisterEmailJob>(x => x.Execute(email, registerCommand.UserForRegister.FirstName, registerCommand.UserForRegister.LastName));
+                _jobService.Enqueue<RegisterEmailJob>(x => x.Execute(registerCommand));
             }
 
             return response;
 
         }
+
     }
 
 }
