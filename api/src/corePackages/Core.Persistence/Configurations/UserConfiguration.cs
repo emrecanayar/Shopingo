@@ -23,7 +23,6 @@ namespace Core.Persistence.Configurations
             builder.Property(x => x.PasswordSalt).HasColumnName("PasswordSalt").HasMaxLength(LengthContraints.PasswordMaxLength);
             builder.Property(x => x.AuthenticatorType).HasColumnName("AuthenticatorType").HasConversion<int>();
             builder.Property(x => x.CultureType).HasColumnName("CultureType").HasConversion<int>();
-            builder.Property(x => x.UserType).HasColumnName("UserType").HasConversion<int>();
             builder.HasMany(x => x.UserOperationClaims);
             builder.HasMany(x => x.RefreshTokens);
             builder.ToTable(TableNameConstants.USER);

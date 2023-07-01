@@ -14,7 +14,6 @@ namespace Core.Domain.Entities
         public byte[] PasswordHash { get; set; }
         public AuthenticatorType AuthenticatorType { get; set; }
         public CultureType CultureType { get; set; }
-        public UserType UserType { get; set; }
         public virtual ICollection<UserOperationClaim> UserOperationClaims { get; set; }
         public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
         public virtual ICollection<PasswordResetHistory> PasswordResetHistories { get; set; }
@@ -29,7 +28,7 @@ namespace Core.Domain.Entities
             ContactUsForms = new HashSet<ContactUsForm>();
         }
 
-        public User(Guid id, string firstName, string lastName, string email, string userName, string registrationNumber, byte[] passwordSalt, byte[] passwordHash, AuthenticatorType authenticatorType, CultureType cultureType, UserType userType) : this()
+        public User(Guid id, string firstName, string lastName, string email, string userName, string registrationNumber, byte[] passwordSalt, byte[] passwordHash, AuthenticatorType authenticatorType, CultureType cultureType) : this()
         {
             Id = id;
             FirstName = firstName;
@@ -41,7 +40,6 @@ namespace Core.Domain.Entities
             PasswordHash = passwordHash;
             AuthenticatorType = authenticatorType;
             CultureType = cultureType;
-            UserType = userType;
         }
     }
 }

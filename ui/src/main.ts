@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './app/components/about-us/about-us.component';
 import { SignInComponent } from './app/components/sign-in/sign-in.component';
 import { AuthInterceptor } from './app/interceptors/auth.interceptor';
+import { RegisterComponent } from './app/components/register/register.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -29,6 +30,7 @@ bootstrapApplication(AppComponent, {
         { path: 'contact-us', component: ContactUsComponent },
         { path: 'about-us', component: AboutUsComponent },
         { path: 'sign-in', component: SignInComponent },
+        { path: 'register', component: RegisterComponent },
       ],
       withPreloading(PreloadAllModules)
     ),
