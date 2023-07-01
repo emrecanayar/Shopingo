@@ -270,5 +270,33 @@ namespace Core.Helpers.Helpers
             var resultProperty = task.GetType().GetProperty("Result");
             return resultProperty?.GetValue(task);
         }
+
+        public static List<string> GetNavigationPropertyNames(Type entityType)
+        {
+            var navigationPropertyNames = new List<string>();
+
+            foreach (var property in entityType.GetProperties())
+            {
+                // ICollection<T> tipinde olan navigation property'leri kontrol et
+                if (property.PropertyType.IsGenericType &&
+                    (property.PropertyType.GetGenericTypeDefinition() == typeof(ICollection<>)
+                     || property.PropertyType.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(ICollection<>))))
+                {
+                    navigationPropertyNames.Add(property.Name);
+                }
+
+                // Tekil navigation property'leri kontrol et
+                else if (property.PropertyType.IsClass && property.PropertyType != typeof(string))
+                {
+                    bool isVirtual = property.GetGetMethod().IsVirtual;
+                    if (isVirtual && property.PropertyType.Namespace == "System.Data.Entity.DynamicProxies")
+                        continue; // EF dynamic proxy, yoksay
+
+                    navigationPropertyNames.Add(property.Name);
+                }
+            }
+
+            return navigationPropertyNames;
+        }
     }
 }

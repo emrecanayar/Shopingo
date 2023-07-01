@@ -4,6 +4,7 @@ using Core.Application.Base.Commands.Update;
 using Core.Application.Base.Queries.GetById;
 using Core.Application.Base.Queries.GetList;
 using Core.Application.Base.Queries.GetListByDynamic;
+using Core.Application.Base.Queries.GetListNavigationProperty;
 using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities;
 using MediatR;
@@ -31,6 +32,10 @@ namespace webAPI.Application
     {
         public static IServiceCollection AddBaseServices(this IServiceCollection services)
         {
+            #region Navigation Properties
+            services.AddScoped(typeof(IRequestHandler<,>), typeof(GetListNavigationPropertyQuery<>.GetListNavigationPropertyQueryHandler<>));
+            #endregion
+
             #region Category
             services.AddScoped<IRequestHandler<GetListQuery<Category, CategoryListModel>, CustomResponseDto<CategoryListModel>>, GetListQuery<Category, CategoryListModel>.GetListQueryHandler>();
             services.AddScoped<IRequestHandler<GetByIdQuery<Category, CategoryDto>, CustomResponseDto<CategoryDto>>, GetByIdQuery<Category, CategoryDto>.GetByIdQueryHandler>();
@@ -38,6 +43,8 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<CreateCommand<Category, CategoryCreateDto>, CustomResponseDto<CategoryCreateDto>>, CreateCommand<Category, CategoryCreateDto>.CreateCommandHandler>();
             services.AddScoped<IRequestHandler<UpdateCommand<Category, ContactUsFormUpdateDto>, CustomResponseDto<ContactUsFormUpdateDto>>, UpdateCommand<Category, ContactUsFormUpdateDto>.UpdateCommandHandler>();
             services.AddScoped<IRequestHandler<DeleteCommand<Category, CategoryDeleteDto>, CustomResponseDto<bool>>, DeleteCommand<Category, CategoryDeleteDto>.DeleteCommandHandler>();
+
+
             #endregion
 
             #region SubCategory

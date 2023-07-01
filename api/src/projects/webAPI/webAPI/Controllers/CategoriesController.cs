@@ -4,6 +4,7 @@ using Core.Application.Base.Commands.Update;
 using Core.Application.Base.Queries.GetById;
 using Core.Application.Base.Queries.GetList;
 using Core.Application.Base.Queries.GetListByDynamic;
+using Core.Application.Base.Queries.GetListNavigationProperty;
 using Core.Application.Requests;
 using Core.Application.ResponseTypes.Concrete;
 using Core.Domain.Entities;
@@ -62,6 +63,14 @@ namespace webAPI.Controllers
         {
             DeleteCommand<Category, CategoryDeleteDto> command = new DeleteCommand<Category, CategoryDeleteDto>(model);
             CustomResponseDto<bool> result = await Mediator.Send(command);
+            return Ok(result);
+        }
+
+        [HttpGet("GetIncludeProperties")]
+        public async Task<IActionResult> GetIncludeProperties()
+        {
+            GetListNavigationPropertyQuery<Category> getNavPropsQuery = new GetListNavigationPropertyQuery<Category>();
+            CustomResponseDto<List<string>> result = await Mediator.Send(getNavPropsQuery);
             return Ok(result);
         }
 

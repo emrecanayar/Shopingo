@@ -1,4 +1,7 @@
-﻿using Core.Application.Requests;
+﻿using Core.Application.Base.Queries.GetListNavigationProperty;
+using Core.Application.Requests;
+using Core.Application.ResponseTypes.Concrete;
+using Core.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using webAPI.Application.Features.UserOperationClaims.Commands.CreateUserOperationClaim;
 using webAPI.Application.Features.UserOperationClaims.Commands.DeleteUserOperationClaim;
@@ -46,6 +49,14 @@ namespace webAPI.WebAPI.Controllers
         public async Task<IActionResult> Delete([FromBody] DeleteUserOperationClaimCommand deleteUserOperationClaimCommand)
         {
             DeletedUserOperationClaimDto result = await Mediator.Send(deleteUserOperationClaimCommand);
+            return Ok(result);
+        }
+
+        [HttpGet("GetIncludeProperties")]
+        public async Task<IActionResult> GetIncludeProperties()
+        {
+            GetListNavigationPropertyQuery<UserOperationClaim> getNavPropsQuery = new GetListNavigationPropertyQuery<UserOperationClaim>();
+            CustomResponseDto<List<string>> result = await Mediator.Send(getNavPropsQuery);
             return Ok(result);
         }
     }
