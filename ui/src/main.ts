@@ -7,13 +7,15 @@ import { bootstrapApplication } from '@angular/platform-browser';
 
 import { AppComponent } from './app/app.component';
 import { importProvidersFrom } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './app/pages/home-page/home-page.component';
 import { ContactUsComponent } from './app/components/contact-us/contact-us.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './app/components/about-us/about-us.component';
+import { SignInComponent } from './app/components/sign-in/sign-in.component';
+import { AuthInterceptor } from './app/interceptors/auth.interceptor';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -26,8 +28,10 @@ bootstrapApplication(AppComponent, {
         { path: '', component: HomePageComponent },
         { path: 'contact-us', component: ContactUsComponent },
         { path: 'about-us', component: AboutUsComponent },
+        { path: 'sign-in', component: SignInComponent },
       ],
       withPreloading(PreloadAllModules)
     ),
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
 });
