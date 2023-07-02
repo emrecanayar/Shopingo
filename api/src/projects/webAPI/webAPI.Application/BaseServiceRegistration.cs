@@ -19,6 +19,8 @@ using webAPI.Application.Features.ContactInfos.Dtos;
 using webAPI.Application.Features.ContactInfos.Models;
 using webAPI.Application.Features.ContactUsForms.Dtos;
 using webAPI.Application.Features.ContactUsForms.Models;
+using webAPI.Application.Features.Countries.Dtos;
+using webAPI.Application.Features.Countries.Models;
 using webAPI.Application.Features.Products.Dtos;
 using webAPI.Application.Features.Products.Models;
 using webAPI.Application.Features.Sizes.Dtos;
@@ -103,6 +105,12 @@ namespace webAPI.Application
             services.AddScoped<IRequestHandler<GetListQuery<AboutUs, AboutUsListModel>, CustomResponseDto<AboutUsListModel>>, GetListQuery<AboutUs, AboutUsListModel>.GetListQueryHandler>();
             services.AddScoped<IRequestHandler<GetByIdQuery<AboutUs, AboutUsDto>, CustomResponseDto<AboutUsDto>>, GetByIdQuery<AboutUs, AboutUsDto>.GetByIdQueryHandler>();
             services.AddScoped<IRequestHandler<GetListByDynamicQuery<AboutUs, AboutUsListModel>, CustomResponseDto<AboutUsListModel>>, GetListByDynamicQuery<AboutUs, AboutUsListModel>.GetListByDynamicQueryHandler>();
+            #endregion
+
+            #region Country
+            services.AddScoped<IRequestHandler<GetListQuery<Country, CountryListModel>, CustomResponseDto<CountryListModel>>, GetListQuery<Country, CountryListModel>.GetListQueryHandler>();
+            services.AddScoped<IRequestHandler<GetByIdQuery<Country, CountryDto>, CustomResponseDto<CountryDto>>, GetByIdQuery<Country, CountryDto>.GetByIdQueryHandler>();
+            services.AddScoped<IRequestHandler<GetListByDynamicQuery<Country, CountryListModel>, CustomResponseDto<CountryListModel>>, GetListByDynamicQuery<Country, CountryListModel>.GetListByDynamicQueryHandler>();
             #endregion
 
             return services;

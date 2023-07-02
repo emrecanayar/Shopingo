@@ -7,6 +7,7 @@ using webAPI.Application.Features.Categories.Profiles;
 using webAPI.Application.Features.CompanyAddresses.Profiles;
 using webAPI.Application.Features.ContactInfos.Profiles;
 using webAPI.Application.Features.ContactUsForms.Profiles;
+using webAPI.Application.Features.Countries.Profiles;
 using webAPI.Application.Features.OperationClaims.Profiles;
 using webAPI.Application.Features.ProductColors.Profiles;
 using webAPI.Application.Features.ProductDeliveries.Profiles;
@@ -42,6 +43,7 @@ namespace webAPI.Application.Features
                 configuration.AddProfile<AboutUsMappingProfiles>();
                 configuration.AddProfile<OperationClaimMappingProfiles>();
                 configuration.AddProfile<UserOperationClaimMappingProfiles>();
+                configuration.AddProfile<CountryMappingProfiles>();
 
             });
 
