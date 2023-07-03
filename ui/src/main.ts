@@ -17,6 +17,7 @@ import { AboutUsComponent } from './app/components/about-us/about-us.component';
 import { SignInComponent } from './app/components/sign-in/sign-in.component';
 import { AuthInterceptor } from './app/interceptors/auth.interceptor';
 import { RegisterComponent } from './app/components/register/register.component';
+import { ResetPasswordComponent } from './app/components/reset-password/reset-password.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -31,6 +32,7 @@ bootstrapApplication(AppComponent, {
         { path: 'about-us', component: AboutUsComponent },
         { path: 'sign-in', component: SignInComponent },
         { path: 'register', component: RegisterComponent },
+        { path: 'reset-password', component: ResetPasswordComponent },
       ],
       withPreloading(PreloadAllModules)
     ),
