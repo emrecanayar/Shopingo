@@ -18,6 +18,9 @@ import { SignInComponent } from './app/components/sign-in/sign-in.component';
 import { AuthInterceptor } from './app/interceptors/auth.interceptor';
 import { RegisterComponent } from './app/components/register/register.component';
 import { ResetPasswordComponent } from './app/components/reset-password/reset-password.component';
+import { AccountDashboardComponent } from './app/components/account-dashboard/account-dashboard.component';
+import { AccountOrderComponent } from './app/components/account-order/account-order.component';
+import { ProfileComponent } from './app/components/profile/profile.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -33,6 +36,24 @@ bootstrapApplication(AppComponent, {
         { path: 'sign-in', component: SignInComponent },
         { path: 'register', component: RegisterComponent },
         { path: 'reset-password', component: ResetPasswordComponent },
+        {
+          path: 'profile',
+          component: ProfileComponent,
+          children: [
+            {
+              path: '',
+              component: AccountDashboardComponent,
+            },
+            {
+              path: 'account-dashboard',
+              component: AccountDashboardComponent,
+            },
+            {
+              path: 'account-order',
+              component: AccountOrderComponent,
+            },
+          ],
+        },
       ],
       withPreloading(PreloadAllModules)
     ),
