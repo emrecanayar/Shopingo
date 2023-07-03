@@ -20,6 +20,7 @@ public class UpdateUserCommand : IRequest<UpdatedUserDto>, ISecuredRequest
     public string RegistrationNumber { get; set; }
     public string Password { get; set; }
     public string[] Roles => new[] { Admin };
+    public int CountryId { get; set; }
     [JsonIgnore]
     public bool RequiresAuthorization { get; set; } = true;
 

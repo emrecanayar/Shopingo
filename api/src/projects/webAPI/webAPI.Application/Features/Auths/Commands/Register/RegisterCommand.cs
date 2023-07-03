@@ -48,7 +48,8 @@ namespace webAPI.Application.Features.Auths.Commands.Register
                     AuthenticatorType = AuthenticatorType.None,
                     CultureType = CultureType.US,
                     RegistrationNumber = request.UserForRegister.RegistrationNumber,
-                    UserName = request.UserForRegister.UserName
+                    UserName = request.UserForRegister.UserName,
+                    CountryId = request.UserForRegister.CountryId,
                 };
 
                 User createdUser = await _userRepository.AddAsync(newUser);

@@ -8,5 +8,7 @@ namespace webAPI.Application.Features.Users.Dtos
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public UserType UserType { get; set; }
+        public Guid CountryId { get; set; }
+        public Guid CountryDto { get; set; }
     }
 }

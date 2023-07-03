@@ -12,4 +12,6 @@ public class UserDto
     public string RegistrationNumber { get; set; }
     public RecordStatu Status { get; set; }
     public UserType UserType { get; set; }
+    public Guid CountryId { get; set; }
+    public Guid CountryDto { get; set; }
 }

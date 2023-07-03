@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -11,6 +12,9 @@ import { RegisterService } from 'src/app/services/register/register.service';
 import { Router, RouterModule } from '@angular/router';
 import { LoadingComponent } from '../loading/loading.component';
 import { UserForRegisterDto } from 'src/app/models/register/user-for-register-dto';
+import { CustomResponseDto } from 'src/app/models/base/custom-response.dto';
+import { CountryListModel } from 'src/app/models/country/country-list-model';
+import { CountryService } from 'src/app/services/country/country.service';
 
 @Component({
   selector: 'app-register',
@@ -21,6 +25,7 @@ import { UserForRegisterDto } from 'src/app/models/register/user-for-register-dt
     ReactiveFormsModule,
     ToastrModule,
     LoadingComponent,
+    FormsModule,
   ],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
@@ -28,11 +33,14 @@ import { UserForRegisterDto } from 'src/app/models/register/user-for-register-dt
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   isLoaded = true;
+  countries: CustomResponseDto<CountryListModel>;
+  selectedCountry: 'Türkiye';
 
   constructor(
     private formBuilder: FormBuilder,
     private toastr: ToastrService,
     private registerService: RegisterService,
+    private contryService: CountryService,
     private router: Router
   ) {}
 
@@ -42,11 +50,20 @@ export class RegisterComponent implements OnInit {
       lastName: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
       password: [null, Validators.required],
+      countryId: [null, Validators.required],
     });
   }
 
   async ngOnInit() {
     this.initializeForm();
+  }
+
+  async loadCountries() {
+    try {
+      this.isLoaded = false;
+      this.countries = await this.contryService.getList(0, 1000);
+      this.isLoaded = true;
+    } catch (error) {}
   }
 
   onSubmit(): void {

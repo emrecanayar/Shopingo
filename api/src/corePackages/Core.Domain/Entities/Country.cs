@@ -11,10 +11,11 @@ namespace Core.Domain.Entities
         public string NumCode { get; set; }
         public string PhoneCode { get; set; }
         public string Flag { get; set; }
+        public ICollection<User> Users { get; set; }
 
         public Country()
         {
-
+            Users = new HashSet<User>();
         }
 
         public Country(Guid id, string iso, string key, string name, string iso3, string numCode, string phoneCode, string flag) : this()

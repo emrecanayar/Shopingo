@@ -8,5 +8,6 @@
         public string LastName { get; set; }
         public string? RegistrationNumber { get; set; }
         public string? UserName { get; set; }
+        public Guid CountryId { get; set; }
     }
 }
