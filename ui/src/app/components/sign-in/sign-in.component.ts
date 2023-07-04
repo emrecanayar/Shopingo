@@ -66,7 +66,7 @@ export class SignInComponent implements OnInit {
       })
       .catch((error) => {
         this.isLoaded = true;
-        this.toastr.error('An error occurred while submitting the form.');
+        this.toastr.error(error.error.detail);
       });
   }
 }

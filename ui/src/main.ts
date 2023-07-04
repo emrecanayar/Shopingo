@@ -21,6 +21,7 @@ import { ResetPasswordComponent } from './app/components/reset-password/reset-pa
 import { AccountDashboardComponent } from './app/components/account-dashboard/account-dashboard.component';
 import { AccountOrderComponent } from './app/components/account-order/account-order.component';
 import { ProfileComponent } from './app/components/profile/profile.component';
+import { PermissionsService, authGuard } from './app/guards/auth.guard';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -43,14 +44,17 @@ bootstrapApplication(AppComponent, {
             {
               path: '',
               component: AccountDashboardComponent,
+              canActivate: [authGuard],
             },
             {
               path: 'account-dashboard',
               component: AccountDashboardComponent,
+              canActivate: [authGuard],
             },
             {
               path: 'account-order',
               component: AccountOrderComponent,
+              canActivate: [authGuard],
             },
           ],
         },
@@ -58,5 +62,6 @@ bootstrapApplication(AppComponent, {
       withPreloading(PreloadAllModules)
     ),
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    [PermissionsService],
   ],
 });
